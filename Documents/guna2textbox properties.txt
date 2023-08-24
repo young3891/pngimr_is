@@ -1,0 +1,21 @@
+﻿font
+size
+AutoRoundedCorners=True
+BorderRadius=21
+ShadowDecoration→BorderRadius=26
+ShadowDecoration→Enabled=True
+ShadowDecoration→Shadow (adjust values accordingly)
+ShadowDecoration→Color (set color on preference)
+ShadowDecoration→Depth
+PlaceholderForeColor (copied from Color)
+Font→ForeColor (Colpied from PlaceholderForeColor)
+PlaceholderText
+Remove text on Text property
+IconLeft
+IconLeftOffset
+IconRight
+IconRightOffset
+IconRightSize
+TextOffset
+
+

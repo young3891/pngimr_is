@@ -1,0 +1,361 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PNGIMR_IS
+</name>
+</assembly>
+<members>
+<member name="T:PNGIMR_IS.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.cancel_btn">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.close_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.delete_btn">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.export_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.new_btn">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.ok_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.ok_icon__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.ok_icon_resized">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.ok_icon_resized1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.Open_file_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PNGIMR_IS.My.Resources.Resources.save_btn">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.comboItems_ds">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.comboItems_ds.tblComboItemsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.comboItems_ds.tblComboItemsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.comboItems_ds.tblComboItemsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:PNGIMR_IS.comboItems_dsTableAdapters.tblComboItemsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.UpdateUpdatedRows(PNGIMR_IS.comboItems_ds,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.UpdateInsertedRows(PNGIMR_IS.comboItems_ds,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.UpdateDeletedRows(PNGIMR_IS.comboItems_ds,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.UpdateAll(PNGIMR_IS.comboItems_ds)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_ds">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_ds.tblInventoryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_ds.tblComboItemsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_ds.tblInventoryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_ds.tblComboItemsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_ds.tblInventoryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_ds.tblComboItemsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_dsTableAdapters.tblInventoryTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_dsTableAdapters.tblComboItemsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager.UpdateUpdatedRows(PNGIMR_IS.inventoryList_ds,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager.UpdateInsertedRows(PNGIMR_IS.inventoryList_ds,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager.UpdateDeletedRows(PNGIMR_IS.inventoryList_ds,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager.UpdateAll(PNGIMR_IS.inventoryList_ds)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:PNGIMR_IS.login_ds">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.login_ds.tblDBUserDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.login_ds.tblDBUserRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.login_ds.tblDBUserRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:PNGIMR_IS.login_dsTableAdapters.tblDBUserTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.login_dsTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:PNGIMR_IS.login_dsTableAdapters.TableAdapterManager.UpdateUpdatedRows(PNGIMR_IS.login_ds,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.login_dsTableAdapters.TableAdapterManager.UpdateInsertedRows(PNGIMR_IS.login_ds,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.login_dsTableAdapters.TableAdapterManager.UpdateDeletedRows(PNGIMR_IS.login_ds,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.login_dsTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:PNGIMR_IS.login_dsTableAdapters.TableAdapterManager.UpdateAll(PNGIMR_IS.login_ds)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.login_dsTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:PNGIMR_IS.login_dsTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:PNGIMR_IS.users_ds">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.users_ds.tblDBUserDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.users_ds.tblDBUserRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.users_ds.tblDBUserRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:PNGIMR_IS.users_dsTableAdapters.tblDBUserTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.users_dsTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.UpdateUpdatedRows(PNGIMR_IS.users_ds,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.UpdateInsertedRows(PNGIMR_IS.users_ds,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.UpdateDeletedRows(PNGIMR_IS.users_ds,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.UpdateAll(PNGIMR_IS.users_ds)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

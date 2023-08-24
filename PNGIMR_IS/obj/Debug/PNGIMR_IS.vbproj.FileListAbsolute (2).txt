@@ -1,0 +1,16 @@
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\bin\Debug\LabAssetInventory.exe.config
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\bin\Debug\LabAssetInventory.exe
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\bin\Debug\LabAssetInventory.pdb
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\bin\Debug\LabAssetInventory.xml
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.frmAddUser.resources
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.frmComboItems.resources
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.frmInventory.resources
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.frmLogin.resources
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.frmMain.resources
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.Resources.resources
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.vbproj.GenerateResource.cache
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.vbproj.CoreCompileInputs.cache
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.exe
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.xml
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.pdb
+C:\Users\yura\Documents\Projects\Laboratory Asset Inventory\LabAssetInventory\LabAssetInventory\obj\Debug\LabAssetInventory.vbproj.AssemblyReference.cache
