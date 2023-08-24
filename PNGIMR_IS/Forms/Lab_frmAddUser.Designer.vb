@@ -111,7 +111,7 @@ Partial Class Lab_frmAddUser
         Me.TblDBUserDataGridView.Location = New System.Drawing.Point(265, 17)
         Me.TblDBUserDataGridView.Name = "TblDBUserDataGridView"
         Me.TblDBUserDataGridView.ReadOnly = True
-        Me.TblDBUserDataGridView.Size = New System.Drawing.Size(527, 154)
+        Me.TblDBUserDataGridView.Size = New System.Drawing.Size(539, 154)
         Me.TblDBUserDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -161,7 +161,7 @@ Partial Class Lab_frmAddUser
         '
         'txtID
         '
-        Me.txtID.BackColor = System.Drawing.Color.Olive
+        Me.txtID.BackColor = System.Drawing.Color.White
         Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "id", True))
         Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -174,7 +174,7 @@ Partial Class Lab_frmAddUser
         '
         'txtFullName
         '
-        Me.txtFullName.BackColor = System.Drawing.Color.Olive
+        Me.txtFullName.BackColor = System.Drawing.Color.White
         Me.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtFullName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "f_name", True))
         Me.txtFullName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -186,7 +186,7 @@ Partial Class Lab_frmAddUser
         '
         'txtUserName
         '
-        Me.txtUserName.BackColor = System.Drawing.Color.Olive
+        Me.txtUserName.BackColor = System.Drawing.Color.White
         Me.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUserName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "u_name", True))
         Me.txtUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -198,7 +198,7 @@ Partial Class Lab_frmAddUser
         '
         'txtPassword
         '
-        Me.txtPassword.BackColor = System.Drawing.Color.Olive
+        Me.txtPassword.BackColor = System.Drawing.Color.White
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.White
@@ -225,7 +225,7 @@ Partial Class Lab_frmAddUser
         'lblEditedBy
         '
         Me.lblEditedBy.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "edited_by", True))
-        Me.lblEditedBy.Location = New System.Drawing.Point(798, 10)
+        Me.lblEditedBy.Location = New System.Drawing.Point(814, 55)
         Me.lblEditedBy.Name = "lblEditedBy"
         Me.lblEditedBy.Size = New System.Drawing.Size(100, 19)
         Me.lblEditedBy.TabIndex = 16
@@ -234,7 +234,7 @@ Partial Class Lab_frmAddUser
         'lblTimeStamp
         '
         Me.lblTimeStamp.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "time_stamp", True))
-        Me.lblTimeStamp.Location = New System.Drawing.Point(798, 36)
+        Me.lblTimeStamp.Location = New System.Drawing.Point(814, 81)
         Me.lblTimeStamp.Name = "lblTimeStamp"
         Me.lblTimeStamp.Size = New System.Drawing.Size(100, 23)
         Me.lblTimeStamp.TabIndex = 17
@@ -242,7 +242,7 @@ Partial Class Lab_frmAddUser
         '
         'txtConfirmPassword
         '
-        Me.txtConfirmPassword.BackColor = System.Drawing.Color.Olive
+        Me.txtConfirmPassword.BackColor = System.Drawing.Color.White
         Me.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtConfirmPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtConfirmPassword.ForeColor = System.Drawing.Color.White
@@ -254,7 +254,7 @@ Partial Class Lab_frmAddUser
         '
         'pnlFullName
         '
-        Me.pnlFullName.BackColor = System.Drawing.Color.Olive
+        Me.pnlFullName.BackColor = System.Drawing.Color.White
         Me.pnlFullName.Controls.Add(Me.txtFullName)
         Me.pnlFullName.Location = New System.Drawing.Point(114, 43)
         Me.pnlFullName.Name = "pnlFullName"
@@ -263,7 +263,7 @@ Partial Class Lab_frmAddUser
         '
         'pnlUserName
         '
-        Me.pnlUserName.BackColor = System.Drawing.Color.Olive
+        Me.pnlUserName.BackColor = System.Drawing.Color.White
         Me.pnlUserName.Controls.Add(Me.txtUserName)
         Me.pnlUserName.Location = New System.Drawing.Point(114, 69)
         Me.pnlUserName.Name = "pnlUserName"
@@ -272,7 +272,7 @@ Partial Class Lab_frmAddUser
         '
         'pnlPassword
         '
-        Me.pnlPassword.BackColor = System.Drawing.Color.Olive
+        Me.pnlPassword.BackColor = System.Drawing.Color.White
         Me.pnlPassword.Controls.Add(Me.txtPassword)
         Me.pnlPassword.Location = New System.Drawing.Point(114, 96)
         Me.pnlPassword.Name = "pnlPassword"
@@ -281,7 +281,7 @@ Partial Class Lab_frmAddUser
         '
         'pnlConfirmPassword
         '
-        Me.pnlConfirmPassword.BackColor = System.Drawing.Color.Olive
+        Me.pnlConfirmPassword.BackColor = System.Drawing.Color.White
         Me.pnlConfirmPassword.Controls.Add(Me.txtConfirmPassword)
         Me.pnlConfirmPassword.Location = New System.Drawing.Point(114, 122)
         Me.pnlConfirmPassword.Name = "pnlConfirmPassword"
@@ -299,7 +299,7 @@ Partial Class Lab_frmAddUser
         '
         'pnlID
         '
-        Me.pnlID.BackColor = System.Drawing.Color.Olive
+        Me.pnlID.BackColor = System.Drawing.Color.White
         Me.pnlID.Controls.Add(Me.txtID)
         Me.pnlID.Location = New System.Drawing.Point(114, 17)
         Me.pnlID.Name = "pnlID"
@@ -321,7 +321,7 @@ Partial Class Lab_frmAddUser
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(788, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(787, 25)
         Me.BindingNavigator1.TabIndex = 26
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -457,7 +457,7 @@ Partial Class Lab_frmAddUser
         '
         Me.lblEncryptedPassword.AutoSize = True
         Me.lblEncryptedPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "pw", True))
-        Me.lblEncryptedPassword.Location = New System.Drawing.Point(798, 59)
+        Me.lblEncryptedPassword.Location = New System.Drawing.Point(814, 104)
         Me.lblEncryptedPassword.Name = "lblEncryptedPassword"
         Me.lblEncryptedPassword.Size = New System.Drawing.Size(101, 13)
         Me.lblEncryptedPassword.TabIndex = 27
@@ -543,7 +543,7 @@ Partial Class Lab_frmAddUser
         'lblUsersTotal
         '
         Me.lblUsersTotal.AutoSize = True
-        Me.lblUsersTotal.Location = New System.Drawing.Point(798, 79)
+        Me.lblUsersTotal.Location = New System.Drawing.Point(814, 124)
         Me.lblUsersTotal.Name = "lblUsersTotal"
         Me.lblUsersTotal.Size = New System.Drawing.Size(58, 13)
         Me.lblUsersTotal.TabIndex = 29
@@ -554,7 +554,7 @@ Partial Class Lab_frmAddUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Chocolate
-        Me.ClientSize = New System.Drawing.Size(788, 211)
+        Me.ClientSize = New System.Drawing.Size(787, 211)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblUsersTotal)
         Me.Controls.Add(Me.pnlMain)

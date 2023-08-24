@@ -78,10 +78,14 @@ Public Class Lab_frmAddUser
         Me.txtPassword.Clear()
         Me.txtConfirmPassword.Clear()
         'Disable/Enable controls
+
         Me.tsbAdd.Enabled = False
         Me.tsbSave.Enabled = True
         Me.tsbDelete.Enabled = False
         Me.tsbCancel.Enabled = True
+
+        'Sets focus of the cursor to full name field
+        Me.txtFullName.Select()
     End Sub
 
     Private Sub tsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
@@ -169,13 +173,17 @@ Public Class Lab_frmAddUser
         Me.tsbDelete.Enabled = True
 
         'Hide the confirm password controls        
-        Me.pnlConfirmPassword.Visible = False
-        Me.lblConfirmPassword.Visible = False
-        Me.pnlPassword.Visible = False
-        Me.lblPassword.Visible = False
+        'Me.pnlConfirmPassword.Visible = True
+        'Me.lblConfirmPassword.Visible = True
+        'Me.pnlPassword.Visible = True
+        'Me.lblPassword.Visible = True
 
-        Me.pnlAccess.Location = New System.Drawing.Point(114, 96)
-        Me.lblAccess.Location = New System.Drawing.Point(49, 100)
+        'Returns access controls to its original location
+        Me.pnlAccess.Location = New System.Drawing.Point(114, 151)
+        Me.lblAccess.Location = New System.Drawing.Point(62, 153)
+
+
+
     End Sub
     Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
         'Deletes a record and saves the dataset
