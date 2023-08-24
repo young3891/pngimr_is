@@ -1,5 +1,6 @@
 ﻿Public Class frmMain
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnLabInventoryDatabase.Click
+        'added some comments
 
         If Lab_frmLogin IsNot Nothing Then
             Lab_frmLogin.Hide()
