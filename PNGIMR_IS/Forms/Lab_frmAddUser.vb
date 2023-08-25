@@ -173,14 +173,21 @@ Public Class Lab_frmAddUser
         Me.tsbDelete.Enabled = True
 
         'Hide the confirm password controls        
-        'Me.pnlConfirmPassword.Visible = True
-        'Me.lblConfirmPassword.Visible = True
+        Me.pnlConfirmPassword.Visible = False
+        Me.lblConfirmPassword.Visible = False
         'Me.pnlPassword.Visible = True
         'Me.lblPassword.Visible = True
 
         'Returns access controls to its original location
-        Me.pnlAccess.Location = New System.Drawing.Point(114, 151)
-        Me.lblAccess.Location = New System.Drawing.Point(62, 153)
+        'Me.pnlAccess.Location = New System.Drawing.Point(114, 151)
+        'Me.lblAccess.Location = New System.Drawing.Point(62, 153)
+
+        'Me.pnlConfirmPassword.Location = New System.Drawing.Point(114, 151)
+        'Me.lblConfirmPassword.Location = New System.Drawing.Point(62, 154)
+
+        Me.pnlAccess.Location = New System.Drawing.Point(114, 122)
+        Me.lblAccess.Location = New System.Drawing.Point(62, 125)
+
 
 
 

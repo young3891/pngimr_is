@@ -23,7 +23,6 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnLabInventoryDatabase = New System.Windows.Forms.Button()
-        Me.btnHRDatabase = New System.Windows.Forms.Button()
         Me.btnExitMainFrm = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblWelcomMessage = New System.Windows.Forms.Label()
@@ -41,18 +40,6 @@ Partial Class frmMain
         Me.btnLabInventoryDatabase.TabIndex = 1
         Me.btnLabInventoryDatabase.Text = "LABORATORY ASSET MANAGEMENT"
         Me.btnLabInventoryDatabase.UseVisualStyleBackColor = False
-        '
-        'btnHRDatabase
-        '
-        Me.btnHRDatabase.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnHRDatabase.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnHRDatabase.ForeColor = System.Drawing.Color.Lime
-        Me.btnHRDatabase.Location = New System.Drawing.Point(183, 117)
-        Me.btnHRDatabase.Name = "btnHRDatabase"
-        Me.btnHRDatabase.Size = New System.Drawing.Size(226, 54)
-        Me.btnHRDatabase.TabIndex = 3
-        Me.btnHRDatabase.Text = "HUMAN RESOURCE"
-        Me.btnHRDatabase.UseVisualStyleBackColor = False
         '
         'btnExitMainFrm
         '
@@ -95,7 +82,6 @@ Partial Class frmMain
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnExitMainFrm)
-        Me.Controls.Add(Me.btnHRDatabase)
         Me.Controls.Add(Me.btnLabInventoryDatabase)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmMain"
@@ -107,7 +93,6 @@ Partial Class frmMain
 
     End Sub
     Friend WithEvents btnLabInventoryDatabase As Button
-    Friend WithEvents btnHRDatabase As Button
     Friend WithEvents btnExitMainFrm As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblWelcomMessage As Label

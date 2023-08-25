@@ -26,11 +26,13 @@ Partial Class Lab_frmAddUser
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Lab_frmAddUser))
         Me.lblID = New System.Windows.Forms.Label()
         Me.TblDBUserDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblDBUserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Users_ds = New PNGIMR_IS.users_ds()
-        Me.txtID = New System.Windows.Forms.TextBox()
-        Me.txtFullName = New System.Windows.Forms.TextBox()
-        Me.txtUserName = New System.Windows.Forms.TextBox()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.cboAccess = New System.Windows.Forms.ComboBox()
         Me.lblEditedBy = New System.Windows.Forms.Label()
         Me.lblTimeStamp = New System.Windows.Forms.Label()
@@ -70,13 +72,13 @@ Partial Class Lab_frmAddUser
         Me.lblFullName = New System.Windows.Forms.Label()
         Me.lblUserName = New System.Windows.Forms.Label()
         Me.lblUsersTotal = New System.Windows.Forms.Label()
-        Me.TblDBUserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TableAdapterManager = New PNGIMR_IS.users_dsTableAdapters.TableAdapterManager()
+        Me.txtFullName = New System.Windows.Forms.TextBox()
+        Me.txtUserName = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
         CType(Me.TblDBUserDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Users_ds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlFullName.SuspendLayout()
         Me.pnlUserName.SuspendLayout()
@@ -87,7 +89,6 @@ Partial Class Lab_frmAddUser
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.pnlMain.SuspendLayout()
-        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblID
@@ -114,60 +115,50 @@ Partial Class Lab_frmAddUser
         Me.TblDBUserDataGridView.Size = New System.Drawing.Size(515, 154)
         Me.TblDBUserDataGridView.TabIndex = 1
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "f_name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Full Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "u_name"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "User Name"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "access"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Access"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "time_stamp"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Time Stamp"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'TblDBUserBindingSource
+        '
+        Me.TblDBUserBindingSource.DataMember = "tblDBUser"
+        Me.TblDBUserBindingSource.DataSource = Me.Users_ds
+        '
         'Users_ds
         '
         Me.Users_ds.DataSetName = "users_ds"
         Me.Users_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'txtID
-        '
-        Me.txtID.BackColor = System.Drawing.Color.White
-        Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "id", True))
-        Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtID.ForeColor = System.Drawing.Color.White
-        Me.txtID.Location = New System.Drawing.Point(6, 3)
-        Me.txtID.Name = "txtID"
-        Me.txtID.ReadOnly = True
-        Me.txtID.Size = New System.Drawing.Size(143, 13)
-        Me.txtID.TabIndex = 3
-        '
-        'txtFullName
-        '
-        Me.txtFullName.BackColor = System.Drawing.Color.White
-        Me.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtFullName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "f_name", True))
-        Me.txtFullName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFullName.ForeColor = System.Drawing.Color.White
-        Me.txtFullName.Location = New System.Drawing.Point(5, 4)
-        Me.txtFullName.Name = "txtFullName"
-        Me.txtFullName.Size = New System.Drawing.Size(136, 13)
-        Me.txtFullName.TabIndex = 5
-        '
-        'txtUserName
-        '
-        Me.txtUserName.BackColor = System.Drawing.Color.White
-        Me.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUserName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "u_name", True))
-        Me.txtUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUserName.ForeColor = System.Drawing.Color.White
-        Me.txtUserName.Location = New System.Drawing.Point(5, 4)
-        Me.txtUserName.Name = "txtUserName"
-        Me.txtUserName.Size = New System.Drawing.Size(136, 13)
-        Me.txtUserName.TabIndex = 7
-        '
-        'txtPassword
-        '
-        Me.txtPassword.BackColor = System.Drawing.Color.White
-        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "pw", True))
-        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.ForeColor = System.Drawing.Color.White
-        Me.txtPassword.Location = New System.Drawing.Point(5, 6)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(136, 13)
-        Me.txtPassword.TabIndex = 9
         '
         'cboAccess
         '
@@ -207,7 +198,7 @@ Partial Class Lab_frmAddUser
         Me.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtConfirmPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtConfirmPassword.ForeColor = System.Drawing.Color.White
-        Me.txtConfirmPassword.Location = New System.Drawing.Point(5, 3)
+        Me.txtConfirmPassword.Location = New System.Drawing.Point(7, 4)
         Me.txtConfirmPassword.Name = "txtConfirmPassword"
         Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtConfirmPassword.Size = New System.Drawing.Size(136, 13)
@@ -274,14 +265,14 @@ Partial Class Lab_frmAddUser
         Me.BindingNavigator1.DeleteItem = Nothing
         Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.tsbAdd, Me.ToolStripSeparator1, Me.tsbSave, Me.ToolStripSeparator2, Me.tsbDelete, Me.ToolStripSeparator3, Me.tsbCancel, Me.ToolStripSeparator4, Me.tsbExit})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 186)
+        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 205)
         Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(955, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(980, 25)
         Me.BindingNavigator1.TabIndex = 26
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -508,52 +499,54 @@ Partial Class Lab_frmAddUser
         Me.lblUsersTotal.TabIndex = 29
         Me.lblUsersTotal.Text = "UsersTotal"
         '
-        'TblDBUserBindingSource
+        'TableAdapterManager
         '
-        Me.TblDBUserBindingSource.DataMember = "tblDBUser"
-        Me.TblDBUserBindingSource.DataSource = Me.Users_ds
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tblDBUserTableAdapter = Me.TblDBUserTableAdapter
+        Me.TableAdapterManager.UpdateOrder = PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'DataGridViewTextBoxColumn7
+        'txtFullName
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "time_stamp"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Time Stamp"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtFullName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "f_name", True))
+        Me.txtFullName.Location = New System.Drawing.Point(7, 4)
+        Me.txtFullName.Name = "txtFullName"
+        Me.txtFullName.Size = New System.Drawing.Size(136, 13)
+        Me.txtFullName.TabIndex = 30
         '
-        'DataGridViewTextBoxColumn5
+        'txtUserName
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "access"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Access"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUserName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "u_name", True))
+        Me.txtUserName.Location = New System.Drawing.Point(7, 4)
+        Me.txtUserName.Name = "txtUserName"
+        Me.txtUserName.Size = New System.Drawing.Size(136, 13)
+        Me.txtUserName.TabIndex = 30
         '
-        'DataGridViewTextBoxColumn3
+        'txtPassword
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "u_name"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "User Name"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "pw", True))
+        Me.txtPassword.Location = New System.Drawing.Point(7, 4)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(136, 13)
+        Me.txtPassword.TabIndex = 30
         '
-        'DataGridViewTextBoxColumn2
+        'txtID
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "f_name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Full Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "id", True))
+        Me.txtID.Location = New System.Drawing.Point(7, 4)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(143, 13)
+        Me.txtID.TabIndex = 30
         '
         'Lab_frmAddUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Chocolate
-        Me.ClientSize = New System.Drawing.Size(955, 211)
+        Me.ClientSize = New System.Drawing.Size(980, 230)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblUsersTotal)
         Me.Controls.Add(Me.pnlMain)
@@ -568,6 +561,7 @@ Partial Class Lab_frmAddUser
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add User"
         CType(Me.TblDBUserDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Users_ds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlFullName.ResumeLayout(False)
         Me.pnlFullName.PerformLayout()
@@ -585,7 +579,6 @@ Partial Class Lab_frmAddUser
         Me.BindingNavigator1.PerformLayout()
         Me.pnlMain.ResumeLayout(False)
         Me.pnlMain.PerformLayout()
-        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -594,10 +587,6 @@ Partial Class Lab_frmAddUser
     Friend WithEvents Users_ds As users_ds
     Friend WithEvents TblDBUserTableAdapter As users_dsTableAdapters.tblDBUserTableAdapter
     Friend WithEvents TblDBUserDataGridView As DataGridView
-    Friend WithEvents txtID As TextBox
-    Friend WithEvents txtFullName As TextBox
-    Friend WithEvents txtUserName As TextBox
-    Friend WithEvents txtPassword As TextBox
     Friend WithEvents cboAccess As ComboBox
     Friend WithEvents lblEditedBy As Label
     Friend WithEvents lblTimeStamp As Label
@@ -644,4 +633,9 @@ Partial Class Lab_frmAddUser
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents TblDBUserBindingSource As BindingSource
+    Friend WithEvents TableAdapterManager As users_dsTableAdapters.TableAdapterManager
+    Friend WithEvents txtFullName As TextBox
+    Friend WithEvents txtUserName As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtID As TextBox
 End Class

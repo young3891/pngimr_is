@@ -25,7 +25,6 @@ Partial Class Lab_frmMain
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.mnuFile = New System.Windows.Forms.MenuStrip()
         Me.tsmFile = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListDuplicatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,6 +34,7 @@ Partial Class Lab_frmMain
         Me.tsmNew = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmOpen = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmExport = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFile.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,15 +66,6 @@ Partial Class Lab_frmMain
         Me.tsmFile.Size = New System.Drawing.Size(37, 20)
         Me.tsmFile.Text = "&File"
         '
-        'tsmExit
-        '
-        Me.tsmExit.BackColor = System.Drawing.Color.Teal
-        Me.tsmExit.ForeColor = System.Drawing.Color.White
-        Me.tsmExit.Image = Global.PNGIMR_IS.My.Resources.Resources.close_icon
-        Me.tsmExit.Name = "tsmExit"
-        Me.tsmExit.Size = New System.Drawing.Size(180, 22)
-        Me.tsmExit.Text = "E&xit"
-        '
         'DataManagementToolStripMenuItem
         '
         Me.DataManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListDuplicatesToolStripMenuItem, Me.DeleteToolStripMenuItem})
@@ -85,14 +76,15 @@ Partial Class Lab_frmMain
         '
         'ListDuplicatesToolStripMenuItem
         '
+        Me.ListDuplicatesToolStripMenuItem.Image = Global.PNGIMR_IS.My.Resources.Resources.duplicate
         Me.ListDuplicatesToolStripMenuItem.Name = "ListDuplicatesToolStripMenuItem"
-        Me.ListDuplicatesToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.ListDuplicatesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ListDuplicatesToolStripMenuItem.Text = "List Duplicates"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'FomsToolStripMenuItem
@@ -121,7 +113,7 @@ Partial Class Lab_frmMain
         Me.tsmNew.ForeColor = System.Drawing.Color.White
         Me.tsmNew.Image = Global.PNGIMR_IS.My.Resources.Resources.new_btn
         Me.tsmNew.Name = "tsmNew"
-        Me.tsmNew.Size = New System.Drawing.Size(180, 22)
+        Me.tsmNew.Size = New System.Drawing.Size(108, 22)
         Me.tsmNew.Text = "&New"
         '
         'tsmOpen
@@ -130,7 +122,7 @@ Partial Class Lab_frmMain
         Me.tsmOpen.ForeColor = System.Drawing.Color.White
         Me.tsmOpen.Image = Global.PNGIMR_IS.My.Resources.Resources.Open_file_icon
         Me.tsmOpen.Name = "tsmOpen"
-        Me.tsmOpen.Size = New System.Drawing.Size(180, 22)
+        Me.tsmOpen.Size = New System.Drawing.Size(108, 22)
         Me.tsmOpen.Text = "&Open"
         '
         'tsmExport
@@ -139,8 +131,17 @@ Partial Class Lab_frmMain
         Me.tsmExport.ForeColor = System.Drawing.Color.White
         Me.tsmExport.Image = Global.PNGIMR_IS.My.Resources.Resources.export_icon
         Me.tsmExport.Name = "tsmExport"
-        Me.tsmExport.Size = New System.Drawing.Size(180, 22)
+        Me.tsmExport.Size = New System.Drawing.Size(108, 22)
         Me.tsmExport.Text = "&Export"
+        '
+        'tsmExit
+        '
+        Me.tsmExit.BackColor = System.Drawing.Color.Teal
+        Me.tsmExit.ForeColor = System.Drawing.Color.White
+        Me.tsmExit.Image = Global.PNGIMR_IS.My.Resources.Resources.close_icon
+        Me.tsmExit.Name = "tsmExit"
+        Me.tsmExit.Size = New System.Drawing.Size(108, 22)
+        Me.tsmExit.Text = "E&xit"
         '
         'Lab_frmMain
         '
