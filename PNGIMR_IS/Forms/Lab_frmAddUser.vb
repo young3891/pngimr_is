@@ -175,6 +175,9 @@ Public Class Lab_frmAddUser
         'Hide the confirm password controls        
         Me.pnlConfirmPassword.Visible = False
         Me.lblConfirmPassword.Visible = False
+        Me.pnlPassword.Visible = False
+        Me.lblPassword.Visible = False
+
         'Me.pnlPassword.Visible = True
         'Me.lblPassword.Visible = True
 
@@ -185,8 +188,9 @@ Public Class Lab_frmAddUser
         'Me.pnlConfirmPassword.Location = New System.Drawing.Point(114, 151)
         'Me.lblConfirmPassword.Location = New System.Drawing.Point(62, 154)
 
-        Me.pnlAccess.Location = New System.Drawing.Point(114, 122)
-        Me.lblAccess.Location = New System.Drawing.Point(62, 125)
+        Me.pnlAccess.Location = New System.Drawing.Point(114, 96)
+        'Me.lblAccess.Location = New System.Drawing.Point(62, 125)
+        Me.lblAccess.Location = New System.Drawing.Point(62, 100)
 
 
 

@@ -57,11 +57,11 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MALCONDM\SQLEXPRESS2014;Initial Catalog=pngimr_lab_inventory;Integrat"& _ 
-            "ed Security=True")>  _
-        Public ReadOnly Property pngimr_lab_inventoryConnectionString() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MALCONDM\SQLEXPRESS2014;Initial Catalog=PNGIMR_IS;Persist Security In"& _ 
+            "fo=True;User ID=sa;Password=<ARZ8$->NH.Y5Jrw")>  _
+        Public ReadOnly Property PNGIMR_ISConnectionString() As String
             Get
-                Return CType(Me("pngimr_lab_inventoryConnectionString"),String)
+                Return CType(Me("PNGIMR_ISConnectionString"),String)
             End Get
         End Property
     End Class

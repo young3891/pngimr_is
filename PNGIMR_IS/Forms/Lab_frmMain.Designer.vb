@@ -25,16 +25,16 @@ Partial Class Lab_frmMain
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.mnuFile = New System.Windows.Forms.MenuStrip()
         Me.tsmFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmNew = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmOpen = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmExport = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListDuplicatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FomsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmAddUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmInventory = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmNew = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmOpen = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmExport = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFile.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,47 +65,6 @@ Partial Class Lab_frmMain
         Me.tsmFile.Name = "tsmFile"
         Me.tsmFile.Size = New System.Drawing.Size(37, 20)
         Me.tsmFile.Text = "&File"
-        '
-        'DataManagementToolStripMenuItem
-        '
-        Me.DataManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListDuplicatesToolStripMenuItem, Me.DeleteToolStripMenuItem})
-        Me.DataManagementToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.DataManagementToolStripMenuItem.Name = "DataManagementToolStripMenuItem"
-        Me.DataManagementToolStripMenuItem.Size = New System.Drawing.Size(117, 20)
-        Me.DataManagementToolStripMenuItem.Text = "&Data Management"
-        '
-        'ListDuplicatesToolStripMenuItem
-        '
-        Me.ListDuplicatesToolStripMenuItem.Image = Global.PNGIMR_IS.My.Resources.Resources.duplicate
-        Me.ListDuplicatesToolStripMenuItem.Name = "ListDuplicatesToolStripMenuItem"
-        Me.ListDuplicatesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ListDuplicatesToolStripMenuItem.Text = "List Duplicates"
-        '
-        'DeleteToolStripMenuItem
-        '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
-        'FomsToolStripMenuItem
-        '
-        Me.FomsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmAddUser, Me.tsmInventory})
-        Me.FomsToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.FomsToolStripMenuItem.Name = "FomsToolStripMenuItem"
-        Me.FomsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
-        Me.FomsToolStripMenuItem.Text = "&Foms"
-        '
-        'tsmAddUser
-        '
-        Me.tsmAddUser.Name = "tsmAddUser"
-        Me.tsmAddUser.Size = New System.Drawing.Size(124, 22)
-        Me.tsmAddUser.Text = "&User"
-        '
-        'tsmInventory
-        '
-        Me.tsmInventory.Name = "tsmInventory"
-        Me.tsmInventory.Size = New System.Drawing.Size(124, 22)
-        Me.tsmInventory.Text = "&Inventory"
         '
         'tsmNew
         '
@@ -142,6 +101,47 @@ Partial Class Lab_frmMain
         Me.tsmExit.Name = "tsmExit"
         Me.tsmExit.Size = New System.Drawing.Size(108, 22)
         Me.tsmExit.Text = "E&xit"
+        '
+        'DataManagementToolStripMenuItem
+        '
+        Me.DataManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListDuplicatesToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.DataManagementToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.DataManagementToolStripMenuItem.Name = "DataManagementToolStripMenuItem"
+        Me.DataManagementToolStripMenuItem.Size = New System.Drawing.Size(117, 20)
+        Me.DataManagementToolStripMenuItem.Text = "&Data Management"
+        '
+        'ListDuplicatesToolStripMenuItem
+        '
+        Me.ListDuplicatesToolStripMenuItem.Image = Global.PNGIMR_IS.My.Resources.Resources.duplicate
+        Me.ListDuplicatesToolStripMenuItem.Name = "ListDuplicatesToolStripMenuItem"
+        Me.ListDuplicatesToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.ListDuplicatesToolStripMenuItem.Text = "List Duplicates"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
+        'FomsToolStripMenuItem
+        '
+        Me.FomsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmAddUser, Me.tsmInventory})
+        Me.FomsToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.FomsToolStripMenuItem.Name = "FomsToolStripMenuItem"
+        Me.FomsToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.FomsToolStripMenuItem.Text = "&Forms"
+        '
+        'tsmAddUser
+        '
+        Me.tsmAddUser.Name = "tsmAddUser"
+        Me.tsmAddUser.Size = New System.Drawing.Size(180, 22)
+        Me.tsmAddUser.Text = "&User"
+        '
+        'tsmInventory
+        '
+        Me.tsmInventory.Name = "tsmInventory"
+        Me.tsmInventory.Size = New System.Drawing.Size(180, 22)
+        Me.tsmInventory.Text = "&Inventory"
         '
         'Lab_frmMain
         '

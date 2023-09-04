@@ -38,11 +38,15 @@ Partial Class Lab_frmAddUser
         Me.lblTimeStamp = New System.Windows.Forms.Label()
         Me.txtConfirmPassword = New System.Windows.Forms.TextBox()
         Me.pnlFullName = New System.Windows.Forms.Panel()
+        Me.txtFullName = New System.Windows.Forms.TextBox()
         Me.pnlUserName = New System.Windows.Forms.Panel()
+        Me.txtUserName = New System.Windows.Forms.TextBox()
         Me.pnlPassword = New System.Windows.Forms.Panel()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.pnlConfirmPassword = New System.Windows.Forms.Panel()
         Me.pnlAccess = New System.Windows.Forms.Panel()
         Me.pnlID = New System.Windows.Forms.Panel()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -73,10 +77,6 @@ Partial Class Lab_frmAddUser
         Me.lblUserName = New System.Windows.Forms.Label()
         Me.lblUsersTotal = New System.Windows.Forms.Label()
         Me.TableAdapterManager = New PNGIMR_IS.users_dsTableAdapters.TableAdapterManager()
-        Me.txtFullName = New System.Windows.Forms.TextBox()
-        Me.txtUserName = New System.Windows.Forms.TextBox()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.txtID = New System.Windows.Forms.TextBox()
         CType(Me.TblDBUserDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Users_ds, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -197,7 +197,7 @@ Partial Class Lab_frmAddUser
         Me.txtConfirmPassword.BackColor = System.Drawing.Color.White
         Me.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtConfirmPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConfirmPassword.ForeColor = System.Drawing.Color.White
+        Me.txtConfirmPassword.ForeColor = System.Drawing.Color.Black
         Me.txtConfirmPassword.Location = New System.Drawing.Point(7, 4)
         Me.txtConfirmPassword.Name = "txtConfirmPassword"
         Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -213,6 +213,15 @@ Partial Class Lab_frmAddUser
         Me.pnlFullName.Size = New System.Drawing.Size(145, 20)
         Me.pnlFullName.TabIndex = 20
         '
+        'txtFullName
+        '
+        Me.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtFullName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "f_name", True))
+        Me.txtFullName.Location = New System.Drawing.Point(7, 4)
+        Me.txtFullName.Name = "txtFullName"
+        Me.txtFullName.Size = New System.Drawing.Size(136, 13)
+        Me.txtFullName.TabIndex = 30
+        '
         'pnlUserName
         '
         Me.pnlUserName.BackColor = System.Drawing.Color.White
@@ -222,6 +231,15 @@ Partial Class Lab_frmAddUser
         Me.pnlUserName.Size = New System.Drawing.Size(145, 20)
         Me.pnlUserName.TabIndex = 21
         '
+        'txtUserName
+        '
+        Me.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUserName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "u_name", True))
+        Me.txtUserName.Location = New System.Drawing.Point(7, 4)
+        Me.txtUserName.Name = "txtUserName"
+        Me.txtUserName.Size = New System.Drawing.Size(136, 13)
+        Me.txtUserName.TabIndex = 30
+        '
         'pnlPassword
         '
         Me.pnlPassword.BackColor = System.Drawing.Color.White
@@ -230,6 +248,16 @@ Partial Class Lab_frmAddUser
         Me.pnlPassword.Name = "pnlPassword"
         Me.pnlPassword.Size = New System.Drawing.Size(145, 20)
         Me.pnlPassword.TabIndex = 22
+        '
+        'txtPassword
+        '
+        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "pw", True))
+        Me.txtPassword.Location = New System.Drawing.Point(7, 4)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(136, 13)
+        Me.txtPassword.TabIndex = 30
         '
         'pnlConfirmPassword
         '
@@ -258,6 +286,15 @@ Partial Class Lab_frmAddUser
         Me.pnlID.Size = New System.Drawing.Size(145, 20)
         Me.pnlID.TabIndex = 25
         '
+        'txtID
+        '
+        Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "id", True))
+        Me.txtID.Location = New System.Drawing.Point(7, 4)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(143, 13)
+        Me.txtID.TabIndex = 30
+        '
         'BindingNavigator1
         '
         Me.BindingNavigator1.AddNewItem = Nothing
@@ -265,14 +302,14 @@ Partial Class Lab_frmAddUser
         Me.BindingNavigator1.DeleteItem = Nothing
         Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.tsbAdd, Me.ToolStripSeparator1, Me.tsbSave, Me.ToolStripSeparator2, Me.tsbDelete, Me.ToolStripSeparator3, Me.tsbCancel, Me.ToolStripSeparator4, Me.tsbExit})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 205)
+        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 192)
         Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(980, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(944, 25)
         Me.BindingNavigator1.TabIndex = 26
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -407,6 +444,7 @@ Partial Class Lab_frmAddUser
         'lblEncryptedPassword
         '
         Me.lblEncryptedPassword.AutoSize = True
+        Me.lblEncryptedPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "pw", True))
         Me.lblEncryptedPassword.Location = New System.Drawing.Point(814, 104)
         Me.lblEncryptedPassword.Name = "lblEncryptedPassword"
         Me.lblEncryptedPassword.Size = New System.Drawing.Size(101, 13)
@@ -505,48 +543,12 @@ Partial Class Lab_frmAddUser
         Me.TableAdapterManager.tblDBUserTableAdapter = Me.TblDBUserTableAdapter
         Me.TableAdapterManager.UpdateOrder = PNGIMR_IS.users_dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'txtFullName
-        '
-        Me.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtFullName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "f_name", True))
-        Me.txtFullName.Location = New System.Drawing.Point(7, 4)
-        Me.txtFullName.Name = "txtFullName"
-        Me.txtFullName.Size = New System.Drawing.Size(136, 13)
-        Me.txtFullName.TabIndex = 30
-        '
-        'txtUserName
-        '
-        Me.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUserName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "u_name", True))
-        Me.txtUserName.Location = New System.Drawing.Point(7, 4)
-        Me.txtUserName.Name = "txtUserName"
-        Me.txtUserName.Size = New System.Drawing.Size(136, 13)
-        Me.txtUserName.TabIndex = 30
-        '
-        'txtPassword
-        '
-        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "pw", True))
-        Me.txtPassword.Location = New System.Drawing.Point(7, 4)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(136, 13)
-        Me.txtPassword.TabIndex = 30
-        '
-        'txtID
-        '
-        Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "id", True))
-        Me.txtID.Location = New System.Drawing.Point(7, 4)
-        Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(143, 13)
-        Me.txtID.TabIndex = 30
-        '
         'Lab_frmAddUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Chocolate
-        Me.ClientSize = New System.Drawing.Size(980, 230)
+        Me.ClientSize = New System.Drawing.Size(944, 217)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblUsersTotal)
         Me.Controls.Add(Me.pnlMain)

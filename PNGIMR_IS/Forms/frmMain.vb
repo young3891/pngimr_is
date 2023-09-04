@@ -8,8 +8,10 @@
             Dim lab_loginFrm As New Lab_frmLogin
             lab_loginFrm.ShowDialog()
         Else
-            Dim lab_loginFrm As New Lab_frmLogin
-            lab_loginFrm.ShowDialog()
+            'Dim lab_loginFrm As New Lab_frmLogin
+            'lab_loginFrm.ShowDialog()
+
+            Lab_frmLogin.ShowDialog()
         End If
     End Sub
 

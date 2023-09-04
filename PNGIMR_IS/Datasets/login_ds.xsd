@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="pngimr_lab_inventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="pngimr_lab_inventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PNGIMR_IS.My.MySettings.GlobalReference.Default.pngimr_lab_inventoryConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="PNGIMR_ISConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PNGIMR_ISConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PNGIMR_IS.My.MySettings.GlobalReference.Default.PNGIMR_ISConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblDBUserTableAdapter" GeneratorDataComponentClassName="tblDBUserTableAdapter" Name="tblDBUser" UserDataComponentName="tblDBUserTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="pngimr_lab_inventoryConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblDBUser" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblDBUser" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblDBUser] WHERE (([id] = @Original_id) AND ([u_name] = @Original_u_name) AND ([access] = @Original_access))</CommandText>
@@ -55,7 +55,7 @@ SELECT id, u_name, pw, access FROM tblDBUser WHERE (id = @id)</CommandText>
               <Mapping SourceColumn="access" DataSetColumn="access" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="pngimr_lab_inventoryConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UserCountQuery" Modifier="Public" Name="UserCountQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UserCountQuery">
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UserCountQuery" Modifier="Public" Name="UserCountQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UserCountQuery">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(id) as id FROM tblDBUser</CommandText>
@@ -73,7 +73,7 @@ SELECT id, u_name, pw, access FROM tblDBUser WHERE (id = @id)</CommandText>
   <xs:element name="login_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="login_ds" msprop:Generator_UserDSName="login_ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblDBUser" msprop:Generator_TableClassName="tblDBUserDataTable" msprop:Generator_TableVarName="tabletblDBUser" msprop:Generator_RowChangedName="tblDBUserRowChanged" msprop:Generator_TablePropName="tblDBUser" msprop:Generator_RowDeletingName="tblDBUserRowDeleting" msprop:Generator_RowChangingName="tblDBUserRowChanging" msprop:Generator_RowEvHandlerName="tblDBUserRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDBUserRowDeleted" msprop:Generator_RowClassName="tblDBUserRow" msprop:Generator_UserTableName="tblDBUser" msprop:Generator_RowEvArgName="tblDBUserRowChangeEvent">
+        <xs:element name="tblDBUser" msprop:Generator_TableClassName="tblDBUserDataTable" msprop:Generator_TableVarName="tabletblDBUser" msprop:Generator_TablePropName="tblDBUser" msprop:Generator_RowDeletingName="tblDBUserRowDeleting" msprop:Generator_RowChangingName="tblDBUserRowChanging" msprop:Generator_RowEvHandlerName="tblDBUserRowChangeEventHandler" msprop:Generator_RowDeletedName="tblDBUserRowDeleted" msprop:Generator_UserTableName="tblDBUser" msprop:Generator_RowChangedName="tblDBUserRowChanged" msprop:Generator_RowEvArgName="tblDBUserRowChangeEvent" msprop:Generator_RowClassName="tblDBUserRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" />

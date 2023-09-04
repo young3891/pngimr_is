@@ -26,23 +26,23 @@ Partial Class Lab_frmLogin
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.pnlPassword = New System.Windows.Forms.Panel()
         Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.TblDBUserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Login_ds = New PNGIMR_IS.login_ds()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.pnlUsername = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblLogin = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
-        Me.TblDBUserTableAdapter = New PNGIMR_IS.login_dsTableAdapters.tblDBUserTableAdapter()
         Me.lblUserCount = New System.Windows.Forms.Label()
         Me.lblEncryptPW = New System.Windows.Forms.Label()
         Me.btnOK = New System.Windows.Forms.Button()
+        Me.TblDBUserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Login_ds = New PNGIMR_IS.login_ds()
+        Me.TblDBUserTableAdapter = New PNGIMR_IS.login_dsTableAdapters.tblDBUserTableAdapter()
         Me.pnlPassword.SuspendLayout()
-        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Login_ds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUsername.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Login_ds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancel
@@ -75,16 +75,6 @@ Partial Class Lab_frmLogin
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(177, 15)
         Me.txtPassword.TabIndex = 1
-        '
-        'TblDBUserBindingSource
-        '
-        Me.TblDBUserBindingSource.DataMember = "tblDBUser"
-        Me.TblDBUserBindingSource.DataSource = Me.Login_ds
-        '
-        'Login_ds
-        '
-        Me.Login_ds.DataSetName = "login_ds"
-        Me.Login_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtUsername
         '
@@ -147,10 +137,6 @@ Partial Class Lab_frmLogin
         Me.lblPassword.TabIndex = 8
         Me.lblPassword.Text = "Password:"
         '
-        'TblDBUserTableAdapter
-        '
-        Me.TblDBUserTableAdapter.ClearBeforeFill = True
-        '
         'lblUserCount
         '
         Me.lblUserCount.AutoSize = True
@@ -185,6 +171,20 @@ Partial Class Lab_frmLogin
         Me.btnOK.Text = "&OK"
         Me.btnOK.UseVisualStyleBackColor = False
         '
+        'TblDBUserBindingSource
+        '
+        Me.TblDBUserBindingSource.DataMember = "tblDBUser"
+        Me.TblDBUserBindingSource.DataSource = Me.Login_ds
+        '
+        'Login_ds
+        '
+        Me.Login_ds.DataSetName = "login_ds"
+        Me.Login_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblDBUserTableAdapter
+        '
+        Me.TblDBUserTableAdapter.ClearBeforeFill = True
+        '
         'Lab_frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -208,12 +208,12 @@ Partial Class Lab_frmLogin
         Me.Text = "frmLogin"
         Me.pnlPassword.ResumeLayout(False)
         Me.pnlPassword.PerformLayout()
-        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Login_ds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlUsername.ResumeLayout(False)
         Me.pnlUsername.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Login_ds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

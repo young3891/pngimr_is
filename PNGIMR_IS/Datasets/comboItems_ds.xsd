@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="pngimr_lab_inventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="pngimr_lab_inventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PNGIMR_IS.My.MySettings.GlobalReference.Default.pngimr_lab_inventoryConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="PNGIMR_ISConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PNGIMR_ISConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PNGIMR_IS.My.MySettings.GlobalReference.Default.PNGIMR_ISConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblComboItemsTableAdapter" GeneratorDataComponentClassName="tblComboItemsTableAdapter" Name="tblComboItems" UserDataComponentName="tblComboItemsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="pngimr_lab_inventoryConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [tblComboItems] WHERE (([id] = @Original_id) AND ([items] = @Original_items) AND ([group_id] = @Original_group_id))</CommandText>
@@ -59,7 +59,7 @@ SELECT id, items, group_id FROM tblComboItems WHERE (id = @id)</CommandText>
               <Mapping SourceColumn="group_id" DataSetColumn="group_id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="pngimr_lab_inventoryConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_dept" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_dept" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy_dept">
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_dept" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_dept" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy_dept">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 102)</CommandText>
@@ -67,7 +67,7 @@ SELECT id, items, group_id FROM tblComboItems WHERE (id = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="pngimr_lab_inventoryConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_room_name" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_room_name" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy_room_name">
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_room_name" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_room_name" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy_room_name">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 103)</CommandText>
@@ -75,7 +75,7 @@ SELECT id, items, group_id FROM tblComboItems WHERE (id = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="pngimr_lab_inventoryConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_room_no" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_room_no" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy_room_no">
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_room_no" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_room_no" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy_room_no">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 104)</CommandText>
@@ -83,7 +83,7 @@ SELECT id, items, group_id FROM tblComboItems WHERE (id = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="pngimr_lab_inventoryConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_Site" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_Site" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy_Site">
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_Site" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_Site" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy_Site">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 101)</CommandText>
@@ -91,7 +91,7 @@ SELECT id, items, group_id FROM tblComboItems WHERE (id = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="pngimr_lab_inventoryConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_supplier" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_supplier" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBy_supplier">
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_supplier" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_supplier" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBy_supplier">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 105)</CommandText>
@@ -109,7 +109,7 @@ SELECT id, items, group_id FROM tblComboItems WHERE (id = @id)</CommandText>
   <xs:element name="comboItems_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="comboItems_ds" msprop:Generator_UserDSName="comboItems_ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblComboItems" msprop:Generator_TableClassName="tblComboItemsDataTable" msprop:Generator_TableVarName="tabletblComboItems" msprop:Generator_TablePropName="tblComboItems" msprop:Generator_RowDeletingName="tblComboItemsRowDeleting" msprop:Generator_RowChangingName="tblComboItemsRowChanging" msprop:Generator_RowEvHandlerName="tblComboItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblComboItemsRowDeleted" msprop:Generator_UserTableName="tblComboItems" msprop:Generator_RowChangedName="tblComboItemsRowChanged" msprop:Generator_RowEvArgName="tblComboItemsRowChangeEvent" msprop:Generator_RowClassName="tblComboItemsRow">
+        <xs:element name="tblComboItems" msprop:Generator_TableClassName="tblComboItemsDataTable" msprop:Generator_TableVarName="tabletblComboItems" msprop:Generator_RowChangedName="tblComboItemsRowChanged" msprop:Generator_TablePropName="tblComboItems" msprop:Generator_RowDeletingName="tblComboItemsRowDeleting" msprop:Generator_RowChangingName="tblComboItemsRowChanging" msprop:Generator_RowEvHandlerName="tblComboItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblComboItemsRowDeleted" msprop:Generator_RowClassName="tblComboItemsRow" msprop:Generator_UserTableName="tblComboItems" msprop:Generator_RowEvArgName="tblComboItemsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
