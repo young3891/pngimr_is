@@ -309,7 +309,7 @@ Partial Class Lab_frmAddUser
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(944, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(786, 25)
         Me.BindingNavigator1.TabIndex = 26
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -548,7 +548,7 @@ Partial Class Lab_frmAddUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Chocolate
-        Me.ClientSize = New System.Drawing.Size(944, 217)
+        Me.ClientSize = New System.Drawing.Size(786, 217)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblUsersTotal)
         Me.Controls.Add(Me.pnlMain)

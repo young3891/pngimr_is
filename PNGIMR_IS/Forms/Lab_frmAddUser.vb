@@ -6,7 +6,7 @@ Public Class Lab_frmAddUser
     Inherits Form
 
     Dim current_date_time As String
-    Dim totalUser As Integer
+
     Public Shared Function HashString(str As String) As String
         Return EncryptString(str)
     End Function
@@ -21,7 +21,7 @@ Public Class Lab_frmAddUser
         Return Convert.ToBase64String(hashed)
     End Function
 
-    Public Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub FrmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         CustomizedControlsClass.frmAddUser_pnlFullName(Me)
         CustomizedControlsClass.frmAddUser_pnlUserName(Me)
@@ -56,7 +56,7 @@ Public Class Lab_frmAddUser
         Me.Timer1.Start()
     End Sub
 
-    Private Sub tsbAdd_Click(sender As Object, e As EventArgs) Handles tsbAdd.Click
+    Private Sub TsbAdd_Click(sender As Object, e As EventArgs) Handles tsbAdd.Click
         Me.pnlMain.Enabled = True
 
         Me.TblDBUserBindingSource.AddNew()
@@ -88,7 +88,7 @@ Public Class Lab_frmAddUser
         Me.txtFullName.Select()
     End Sub
 
-    Private Sub tsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
+    Private Sub TsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
         '->Ensures that all fields must have values
 
         If Me.txtFullName.TextLength = 0 Then
@@ -158,7 +158,7 @@ Public Class Lab_frmAddUser
         current_date_time = current_date + " " + current_time
         Me.lblTimeStamp.Text = current_date_time
     End Sub
-    Private Sub tsbCancel_Click(sender As Object, e As EventArgs) Handles tsbCancel.Click
+    Private Sub TsbCancel_Click(sender As Object, e As EventArgs) Handles tsbCancel.Click
         'Cancel changes
         Me.TblDBUserBindingSource.CancelEdit()
         Me.Users_ds.tblDBUser.RejectChanges()
@@ -196,13 +196,13 @@ Public Class Lab_frmAddUser
 
 
     End Sub
-    Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
+    Private Sub TsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
         'Deletes a record and saves the dataset
         Me.TblDBUserBindingSource.RemoveCurrent()
         Me.TblDBUserTableAdapter.Update(Me.Users_ds.tblDBUser)
         MessageBox.Show("1 record successfully deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
-    Private Sub tsbExit_Click(sender As Object, e As EventArgs) Handles tsbExit.Click
+    Private Sub TsbExit_Click(sender As Object, e As EventArgs) Handles tsbExit.Click
 
         Me.Hide()
 
@@ -216,7 +216,7 @@ Public Class Lab_frmAddUser
 
         Me.Close()
     End Sub
-    Private Sub cboAccess_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cboAccess.KeyPress
+    Private Sub CboAccess_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cboAccess.KeyPress
         'Check if the pressed key is a letter
         If Char.IsLetter(e.KeyChar) Then
             ' Find the first item that starts with the pressed letter

@@ -49,10 +49,10 @@ Partial Class Lab_frmInventory
         Dim lblSold As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Lab_frmInventory))
         Me.lblConfirmity = New System.Windows.Forms.Label()
-        Me.InventoryList_ds = New inventoryList_ds()
+        Me.InventoryList_ds = New PNGIMR_IS.inventoryList_ds()
         Me.TblInventoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblInventoryTableAdapter = New inventoryList_dsTableAdapters.tblInventoryTableAdapter()
-        Me.TableAdapterManager = New inventoryList_dsTableAdapters.TableAdapterManager()
+        Me.TblInventoryTableAdapter = New PNGIMR_IS.inventoryList_dsTableAdapters.tblInventoryTableAdapter()
+        Me.TableAdapterManager = New PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager()
         Me.TblInventoryBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -139,9 +139,8 @@ Partial Class Lab_frmInventory
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblEditedBy = New System.Windows.Forms.Label()
         Me.lblTimeStamp = New System.Windows.Forms.Label()
-        Me.TblComboItemsTableAdapter = New inventoryList_dsTableAdapters.tblComboItemsTableAdapter()
+        Me.TblComboItemsTableAdapter = New PNGIMR_IS.inventoryList_dsTableAdapters.tblComboItemsTableAdapter()
         Me.lblGroupID = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         lblId = New System.Windows.Forms.Label()
         lblAssetName = New System.Windows.Forms.Label()
         lblBrand = New System.Windows.Forms.Label()
@@ -448,7 +447,7 @@ Partial Class Lab_frmInventory
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.tblComboItemsTableAdapter = Nothing
         Me.TableAdapterManager.tblInventoryTableAdapter = Me.TblInventoryTableAdapter
-        Me.TableAdapterManager.UpdateOrder = inventoryList_dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = PNGIMR_IS.inventoryList_dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'TblInventoryBindingNavigator
         '
@@ -1252,23 +1251,13 @@ Partial Class Lab_frmInventory
         Me.lblGroupID.TabIndex = 60
         Me.lblGroupID.Text = "groupID"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(722, 666)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 61
-        Me.Label1.Text = "Label1"
-        '
-        'frmInventory
+        'Lab_frmInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1497, 703)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblGroupID)
         Me.Controls.Add(Me.pnlInventoryDetails)
         Me.Controls.Add(Me.TblInventoryDataGridView)
@@ -1276,7 +1265,7 @@ Partial Class Lab_frmInventory
         Me.Controls.Add(Me.lblTimeStamp)
         Me.Controls.Add(Me.TblInventoryBindingNavigator)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Name = "frmInventory"
+        Me.Name = "Lab_frmInventory"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Inventory"
         CType(Me.InventoryList_ds, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1390,5 +1379,4 @@ Partial Class Lab_frmInventory
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
     Public WithEvents TblComboItemsTableAdapter As inventoryList_dsTableAdapters.tblComboItemsTableAdapter
     Friend WithEvents lblGroupID As Label
-    Friend WithEvents Label1 As Label
 End Class

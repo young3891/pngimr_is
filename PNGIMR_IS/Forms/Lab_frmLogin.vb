@@ -17,7 +17,7 @@ Public Class Lab_frmLogin
         Dim hashed = System.Security.Cryptography.SHA256.Create().ComputeHash(bytes)
         Return Convert.ToBase64String(hashed)
     End Function
-    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.TblDBUserTableAdapter.Fill(Me.Login_ds.tblDBUser, Me.txtUsername.Text, Me.txtPassword.Text)
 
         CustomizedControlsClass.frmLogin_btnCancel(Me)
@@ -35,11 +35,11 @@ Public Class Lab_frmLogin
         End If
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
-    Public Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+    Public Sub BtnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         '--Logging into the system for the first time--------------------------------------------------------------------------
 
         '->Checks number of users already registered        
@@ -60,7 +60,7 @@ Public Class Lab_frmLogin
             '->Enables the panel that holds all the controls            
 
             '->Hides the main form
-            frmMain.Hide()
+            FrmMain.Hide()
             Me.Hide()
 
             '->Opens the add user form
@@ -97,13 +97,13 @@ Public Class Lab_frmLogin
                 If Application.OpenForms.OfType(Of Lab_frmMain)().Any() Then
                     Lab_frmMain.Hide()
 
-                    If Application.OpenForms.OfType(Of frmMain)().Any() Then
-                        frmMain.Hide()
+                    If Application.OpenForms.OfType(Of FrmMain)().Any() Then
+                        FrmMain.Hide()
                     End If
 
                     Lab_frmMain.Show()
                 Else
-                    frmMain.Hide()
+                    FrmMain.Hide()
                     Lab_frmMain.Show()
                 End If
             End If

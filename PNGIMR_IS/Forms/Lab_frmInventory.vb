@@ -4,7 +4,7 @@ Public Class Lab_frmInventory
     Dim current_date_time As String
     'Dim selectedDate As DateTime?
     'Dim defaultDate As String
-    Private Sub frmInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Me.TblInventoryTableAdapter.get_Total() = 0 Then
             Me.tsbSave.Enabled = False
             Me.tsbDelete.Enabled = False
@@ -44,7 +44,7 @@ Public Class Lab_frmInventory
         Me.Timer1.Start()
 
         'Sets format of the date columns of the dgv
-        Dim dateColumnIndex As Integer = 0
+        'Dim dateColumnIndex As Integer = 0
         Me.TblInventoryDataGridView.Columns(10).DefaultCellStyle.Format = "dd/MM/yyyy"
         Me.TblInventoryDataGridView.Columns(11).DefaultCellStyle.Format = "dd/MM/yyyy"
         Me.TblInventoryDataGridView.Columns(16).DefaultCellStyle.Format = "dd/MM/yyyy"
@@ -57,11 +57,11 @@ Public Class Lab_frmInventory
         'Disables cancel button
         Me.tsbCancel.Enabled = False
     End Sub
-    Private Sub tsbExit_Click(sender As Object, e As EventArgs) Handles tsbExit.Click
+    Private Sub TsbExit_Click(sender As Object, e As EventArgs) Handles tsbExit.Click
         Me.Close()
     End Sub
 
-    Private Sub tsbAdd_Click(sender As Object, e As EventArgs) Handles tsbAdd.Click
+    Private Sub TsbAdd_Click(sender As Object, e As EventArgs) Handles tsbAdd.Click
         Me.pnlInventoryDetails.Enabled = True
 
         Me.TblInventoryBindingSource.AddNew()
@@ -89,7 +89,7 @@ Public Class Lab_frmInventory
         Me.dtpServiceDue.Format = DateTimePickerFormat.Custom
 
     End Sub
-    Private Function checksMandatoryFields()
+    Private Function ChecksMandatoryFields()
         '->Ensures the mandatory field should have value        
         If Me.txtAssetName.TextLength = 0 Then
             MessageBox.Show("Please enter an asset name.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -156,11 +156,11 @@ Public Class Lab_frmInventory
         Return True
 
     End Function
-    Private Sub tsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
+    Private Sub TsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
 
         Try
             '->Runs function for mandatory fields
-            If Not checksMandatoryFields() Then
+            If Not ChecksMandatoryFields() Then
                 Exit Sub
             End If
 
@@ -202,7 +202,7 @@ Public Class Lab_frmInventory
 
     End Sub
 
-    Private Sub btnAddSite_Click(sender As Object, e As EventArgs) Handles btnAddSite.Click
+    Private Sub BtnAddSite_Click(sender As Object, e As EventArgs) Handles btnAddSite.Click
         Dim comboItemsFrm As New Lab_frmComboItems
 
         'Stores comboboxes values to temp labels
@@ -221,7 +221,7 @@ Public Class Lab_frmInventory
         comboItemsFrm.Text = "Add Site"
         comboItemsFrm.ShowDialog()
     End Sub
-    Private Sub btnAddDept_Click(sender As Object, e As EventArgs) Handles btnAddDept.Click
+    Private Sub BtnAddDept_Click(sender As Object, e As EventArgs) Handles btnAddDept.Click
         Dim comboItemsFrm As New Lab_frmComboItems
 
         'Stores comboboxes values to temp labels
@@ -240,7 +240,7 @@ Public Class Lab_frmInventory
         comboItemsFrm.Text = "Add Department/ Unit"
         comboItemsFrm.ShowDialog()
     End Sub
-    Private Sub btnAddRoomName_Click(sender As Object, e As EventArgs) Handles btnAddRoomName.Click
+    Private Sub BtnAddRoomName_Click(sender As Object, e As EventArgs) Handles btnAddRoomName.Click
         Dim comboItemsFrm As New Lab_frmComboItems
 
         'Stores comboboxes values to temp labels
@@ -259,7 +259,7 @@ Public Class Lab_frmInventory
         comboItemsFrm.Text = "Add Room Name"
         comboItemsFrm.ShowDialog()
     End Sub
-    Private Sub btnAddRoomNo_Click(sender As Object, e As EventArgs) Handles btnAddRoomNo.Click
+    Private Sub BtnAddRoomNo_Click(sender As Object, e As EventArgs) Handles btnAddRoomNo.Click
         Dim comboItemsFrm As New Lab_frmComboItems
 
         'Stores comboboxes values to temp labels
@@ -278,7 +278,7 @@ Public Class Lab_frmInventory
         comboItemsFrm.Text = "Add Room No"
         comboItemsFrm.ShowDialog()
     End Sub
-    Private Sub btnAddSupplier_Click(sender As Object, e As EventArgs) Handles btnAddSupplier.Click
+    Private Sub BtnAddSupplier_Click(sender As Object, e As EventArgs) Handles btnAddSupplier.Click
         Dim comboItemsFrm As New Lab_frmComboItems
 
         'Stores comboboxes values to temp labels
@@ -305,37 +305,37 @@ Public Class Lab_frmInventory
         current_date_time = current_date + " " + current_time
         Me.lblTimeStamp.Text = current_date_time
     End Sub
-    Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
+    Private Sub TsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
         Me.TblInventoryBindingSource.RemoveCurrent()
         Me.TblInventoryTableAdapter.Update(Me.InventoryList_ds.tblInventory)
         MessageBox.Show("1 record successfully deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
-    Private Sub cboSite_Click(sender As Object, e As EventArgs) Handles cboSite.Click
+    Private Sub CboSite_Click(sender As Object, e As EventArgs) Handles cboSite.Click
         With cboSite
             .DataSource = Me.TblComboItemsTableAdapter.DataTable_site
             .DisplayMember = "items"
         End With
     End Sub
-    Private Sub cboDepartmentUnit_Click(sender As Object, e As EventArgs) Handles cboDepartmentUnit.Click
+    Private Sub CboDepartmentUnit_Click(sender As Object, e As EventArgs) Handles cboDepartmentUnit.Click
 
         With cboDepartmentUnit
             .DataSource = Me.TblComboItemsTableAdapter.DataTable_dept
             .DisplayMember = "items"
         End With
     End Sub
-    Private Sub cboRoomName_Click(sender As Object, e As EventArgs) Handles cboRoomName.Click
+    Private Sub CboRoomName_Click(sender As Object, e As EventArgs) Handles cboRoomName.Click
         With cboRoomName
             .DataSource = Me.TblComboItemsTableAdapter.DataTable_room_name
             .DisplayMember = "items"
         End With
     End Sub
-    Private Sub cboRoomNo_Click(sender As Object, e As EventArgs) Handles cboRoomNo.Click
+    Private Sub CboRoomNo_Click(sender As Object, e As EventArgs) Handles cboRoomNo.Click
         With cboRoomNo
             .DataSource = Me.TblComboItemsTableAdapter.DataTable_room_no
             .DisplayMember = "items"
         End With
     End Sub
-    Private Sub cboSupplier_Click(sender As Object, e As EventArgs) Handles cboSupplier.Click
+    Private Sub CboSupplier_Click(sender As Object, e As EventArgs) Handles cboSupplier.Click
         With cboSupplier
             .DataSource = Me.TblComboItemsTableAdapter.DataTable_supplier
             .DisplayMember = "items"
@@ -458,35 +458,35 @@ Public Class Lab_frmInventory
         End If
     End Sub
 
-    Private Sub dtpServiceDue_ValueChanged(sender As Object, e As EventArgs) Handles dtpServiceDue.ValueChanged
+    Private Sub DtpServiceDue_ValueChanged(sender As Object, e As EventArgs) Handles dtpServiceDue.ValueChanged
         Me.dtpServiceDue.CustomFormat = "dd/MM/yyyy"
     End Sub
 
-    Private Sub dtpServiceDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpServiceDate.ValueChanged
+    Private Sub DtpServiceDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpServiceDate.ValueChanged
         Me.dtpServiceDate.CustomFormat = "dd/MM/yyyy"
     End Sub
 
-    Private Sub dtpDateofPhysicalVerification_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateofPhysicalVerification.ValueChanged
+    Private Sub DtpDateofPhysicalVerification_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateofPhysicalVerification.ValueChanged
         Me.dtpDateofPhysicalVerification.CustomFormat = "dd/MM/yyyy"
     End Sub
 
-    Private Sub dtpDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpDate.ValueChanged
+    Private Sub DtpDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpDate.ValueChanged
         Me.dtpDate.CustomFormat = "dd/MM/yyyy"
     End Sub
 
-    Private Sub dtpWarrantyExpiration_ValueChanged(sender As Object, e As EventArgs) Handles dtpWarrantyExpiration.ValueChanged
+    Private Sub DtpWarrantyExpiration_ValueChanged(sender As Object, e As EventArgs) Handles dtpWarrantyExpiration.ValueChanged
         Me.dtpWarrantyExpiration.CustomFormat = "dd/MM/yyyy"
     End Sub
 
-    Private Sub dtpDecontaminated_ValueChanged(sender As Object, e As EventArgs) Handles dtpDecontaminated.ValueChanged
+    Private Sub DtpDecontaminated_ValueChanged(sender As Object, e As EventArgs) Handles dtpDecontaminated.ValueChanged
         Me.dtpDecontaminated.CustomFormat = "dd/MM/yyyy"
     End Sub
 
-    Private Sub dtpDispose_ValueChanged(sender As Object, e As EventArgs) Handles dtpDispose.ValueChanged
+    Private Sub DtpDispose_ValueChanged(sender As Object, e As EventArgs) Handles dtpDispose.ValueChanged
         Me.dtpDispose.CustomFormat = "dd/MM/yyyy"
     End Sub
 
-    Private Sub dtpSold_ValueChanged(sender As Object, e As EventArgs) Handles dtpSold.ValueChanged
+    Private Sub DtpSold_ValueChanged(sender As Object, e As EventArgs) Handles dtpSold.ValueChanged
         Me.dtpSold.CustomFormat = "dd/MM/yyyy"
     End Sub
 
@@ -532,7 +532,7 @@ Public Class Lab_frmInventory
         End If
     End Sub
 
-    Private Sub tsbCancel_Click(sender As Object, e As EventArgs) Handles tsbCancel.Click
+    Private Sub TsbCancel_Click(sender As Object, e As EventArgs) Handles tsbCancel.Click
         'Cancel changes made
         Me.TblInventoryBindingSource.CancelEdit()
         Me.InventoryList_ds.tblInventory.RejectChanges()
@@ -543,6 +543,4 @@ Public Class Lab_frmInventory
         Me.TblInventoryDataGridView.Enabled = True
         Me.tsbCancel.Enabled = False
     End Sub
-
-
 End Class
