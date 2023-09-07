@@ -18,7 +18,7 @@ Public Class Lab_frmLogin
         Return Convert.ToBase64String(hashed)
     End Function
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'Retest pushing updated code to github    
         Me.TblDBUserTableAdapter.Fill(Me.Login_ds.tblDBUser, Me.txtUsername.Text, Me.txtPassword.Text)
 
         CustomizedControlsClass.frmLogin_btnCancel(Me)
