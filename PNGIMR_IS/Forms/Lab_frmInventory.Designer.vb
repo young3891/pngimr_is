@@ -141,6 +141,9 @@ Partial Class Lab_frmInventory
         Me.lblTimeStamp = New System.Windows.Forms.Label()
         Me.TblComboItemsTableAdapter = New PNGIMR_IS.inventoryList_dsTableAdapters.tblComboItemsTableAdapter()
         Me.lblGroupID = New System.Windows.Forms.Label()
+        Me.CboAssetName = New System.Windows.Forms.ComboBox()
+        Me.BtnAddAssetName = New System.Windows.Forms.Button()
+        Me.BindingSource_asset_name = New System.Windows.Forms.BindingSource(Me.components)
         lblId = New System.Windows.Forms.Label()
         lblAssetName = New System.Windows.Forms.Label()
         lblBrand = New System.Windows.Forms.Label()
@@ -176,6 +179,7 @@ Partial Class Lab_frmInventory
         CType(Me.BindingSource_room_name, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource_dept, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource_site, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource_asset_name, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblId
@@ -457,14 +461,14 @@ Partial Class Lab_frmInventory
         Me.TblInventoryBindingNavigator.DeleteItem = Nothing
         Me.TblInventoryBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.TblInventoryBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.tsbAdd, Me.tsbSave, Me.ToolStripSeparator1, Me.tsbCancel, Me.ToolStripSeparator2, Me.tsbDelete, Me.ToolStripSeparator3, Me.tsbExit, Me.ToolStripSeparator4})
-        Me.TblInventoryBindingNavigator.Location = New System.Drawing.Point(0, 678)
+        Me.TblInventoryBindingNavigator.Location = New System.Drawing.Point(0, 696)
         Me.TblInventoryBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.TblInventoryBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.TblInventoryBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.TblInventoryBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.TblInventoryBindingNavigator.Name = "TblInventoryBindingNavigator"
         Me.TblInventoryBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.TblInventoryBindingNavigator.Size = New System.Drawing.Size(1497, 25)
+        Me.TblInventoryBindingNavigator.Size = New System.Drawing.Size(1546, 25)
         Me.TblInventoryBindingNavigator.TabIndex = 0
         Me.TblInventoryBindingNavigator.Text = "BindingNavigator1"
         '
@@ -813,9 +817,9 @@ Partial Class Lab_frmInventory
         'txtAssetName
         '
         Me.txtAssetName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblInventoryBindingSource, "asset_name", True))
-        Me.txtAssetName.Location = New System.Drawing.Point(147, 38)
+        Me.txtAssetName.Location = New System.Drawing.Point(3, 39)
         Me.txtAssetName.Name = "txtAssetName"
-        Me.txtAssetName.Size = New System.Drawing.Size(200, 20)
+        Me.txtAssetName.Size = New System.Drawing.Size(67, 20)
         Me.txtAssetName.TabIndex = 1
         '
         'txtBrand
@@ -996,6 +1000,8 @@ Partial Class Lab_frmInventory
         '
         'pnlInventoryDetails
         '
+        Me.pnlInventoryDetails.Controls.Add(Me.BtnAddAssetName)
+        Me.pnlInventoryDetails.Controls.Add(Me.CboAssetName)
         Me.pnlInventoryDetails.Controls.Add(Me.btnAddSupplier)
         Me.pnlInventoryDetails.Controls.Add(Me.btnAddRoomNo)
         Me.pnlInventoryDetails.Controls.Add(Me.btnAddRoomName)
@@ -1053,7 +1059,7 @@ Partial Class Lab_frmInventory
         Me.pnlInventoryDetails.Controls.Add(lblAssetNumber)
         Me.pnlInventoryDetails.Location = New System.Drawing.Point(6, 5)
         Me.pnlInventoryDetails.Name = "pnlInventoryDetails"
-        Me.pnlInventoryDetails.Size = New System.Drawing.Size(374, 665)
+        Me.pnlInventoryDetails.Size = New System.Drawing.Size(374, 676)
         Me.pnlInventoryDetails.TabIndex = 56
         '
         'btnAddSupplier
@@ -1251,12 +1257,39 @@ Partial Class Lab_frmInventory
         Me.lblGroupID.TabIndex = 60
         Me.lblGroupID.Text = "groupID"
         '
+        'CboAssetName
+        '
+        Me.CboAssetName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblInventoryBindingSource, "asset_name", True))
+        Me.CboAssetName.FormattingEnabled = True
+        Me.CboAssetName.Location = New System.Drawing.Point(147, 39)
+        Me.CboAssetName.Name = "CboAssetName"
+        Me.CboAssetName.Size = New System.Drawing.Size(200, 21)
+        Me.CboAssetName.TabIndex = 56
+        '
+        'BtnAddAssetName
+        '
+        Me.BtnAddAssetName.BackColor = System.Drawing.Color.Blue
+        Me.BtnAddAssetName.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAddAssetName.Location = New System.Drawing.Point(347, 38)
+        Me.BtnAddAssetName.Name = "BtnAddAssetName"
+        Me.BtnAddAssetName.Size = New System.Drawing.Size(25, 23)
+        Me.BtnAddAssetName.TabIndex = 57
+        Me.BtnAddAssetName.Text = "+"
+        Me.BtnAddAssetName.UseVisualStyleBackColor = False
+        '
+        'BindingSource_asset_name
+        '
+        Me.BindingSource_asset_name.DataMember = "tblComboItems"
+        Me.BindingSource_asset_name.DataSource = Me.InventoryList_ds
+        Me.BindingSource_asset_name.Filter = ""
+        Me.BindingSource_asset_name.Sort = ""
+        '
         'Lab_frmInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1497, 703)
+        Me.ClientSize = New System.Drawing.Size(1546, 721)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblGroupID)
         Me.Controls.Add(Me.pnlInventoryDetails)
@@ -1281,6 +1314,7 @@ Partial Class Lab_frmInventory
         CType(Me.BindingSource_room_name, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource_dept, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource_site, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource_asset_name, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1379,4 +1413,7 @@ Partial Class Lab_frmInventory
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
     Public WithEvents TblComboItemsTableAdapter As inventoryList_dsTableAdapters.tblComboItemsTableAdapter
     Friend WithEvents lblGroupID As Label
+    Friend WithEvents BtnAddAssetName As Button
+    Friend WithEvents CboAssetName As ComboBox
+    Friend WithEvents BindingSource_asset_name As BindingSource
 End Class

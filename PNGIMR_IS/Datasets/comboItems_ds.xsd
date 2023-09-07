@@ -59,6 +59,14 @@ SELECT id, items, group_id FROM tblComboItems WHERE (id = @id)</CommandText>
               <Mapping SourceColumn="group_id" DataSetColumn="group_id" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="PNGIMR_IS.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_asset_name" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_asset_name" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillBy_asset_name">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 106)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="PNGIMR_ISConnectionString (MySettings)" DbObjectName="pngimr_lab_inventory.dbo.tblComboItems" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_dept" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_dept" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy_dept">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
@@ -109,7 +117,7 @@ SELECT id, items, group_id FROM tblComboItems WHERE (id = @id)</CommandText>
   <xs:element name="comboItems_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="comboItems_ds" msprop:Generator_UserDSName="comboItems_ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblComboItems" msprop:Generator_TableClassName="tblComboItemsDataTable" msprop:Generator_TableVarName="tabletblComboItems" msprop:Generator_RowChangedName="tblComboItemsRowChanged" msprop:Generator_TablePropName="tblComboItems" msprop:Generator_RowDeletingName="tblComboItemsRowDeleting" msprop:Generator_RowChangingName="tblComboItemsRowChanging" msprop:Generator_RowEvHandlerName="tblComboItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblComboItemsRowDeleted" msprop:Generator_RowClassName="tblComboItemsRow" msprop:Generator_UserTableName="tblComboItems" msprop:Generator_RowEvArgName="tblComboItemsRowChangeEvent">
+        <xs:element name="tblComboItems" msprop:Generator_TableClassName="tblComboItemsDataTable" msprop:Generator_TableVarName="tabletblComboItems" msprop:Generator_TablePropName="tblComboItems" msprop:Generator_RowDeletingName="tblComboItemsRowDeleting" msprop:Generator_RowChangingName="tblComboItemsRowChanging" msprop:Generator_RowEvHandlerName="tblComboItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblComboItemsRowDeleted" msprop:Generator_UserTableName="tblComboItems" msprop:Generator_RowChangedName="tblComboItemsRowChanged" msprop:Generator_RowEvArgName="tblComboItemsRowChangeEvent" msprop:Generator_RowClassName="tblComboItemsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />

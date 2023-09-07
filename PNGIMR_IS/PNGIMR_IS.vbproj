@@ -301,5 +301,8 @@
   <ItemGroup>
     <None Include="Resources\duplicate.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_btn %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

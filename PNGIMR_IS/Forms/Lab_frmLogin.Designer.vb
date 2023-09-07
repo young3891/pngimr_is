@@ -23,10 +23,11 @@ Partial Class Lab_frmLogin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.btnCancel = New System.Windows.Forms.Button()
         Me.pnlPassword = New System.Windows.Forms.Panel()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.TblDBUserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Login_ds = New PNGIMR_IS.login_ds()
         Me.pnlUsername = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblLogin = New System.Windows.Forms.Label()
@@ -34,27 +35,15 @@ Partial Class Lab_frmLogin
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblUserCount = New System.Windows.Forms.Label()
         Me.lblEncryptPW = New System.Windows.Forms.Label()
-        Me.btnOK = New System.Windows.Forms.Button()
-        Me.TblDBUserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Login_ds = New PNGIMR_IS.login_ds()
         Me.TblDBUserTableAdapter = New PNGIMR_IS.login_dsTableAdapters.tblDBUserTableAdapter()
+        Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.BtnOK = New System.Windows.Forms.Button()
         Me.pnlPassword.SuspendLayout()
-        Me.pnlUsername.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Login_ds, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlUsername.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancel.Location = New System.Drawing.Point(172, 104)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(64, 30)
-        Me.btnCancel.TabIndex = 3
-        Me.btnCancel.Text = "&Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'pnlPassword
         '
@@ -86,6 +75,16 @@ Partial Class Lab_frmLogin
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(177, 15)
         Me.txtUsername.TabIndex = 0
+        '
+        'TblDBUserBindingSource
+        '
+        Me.TblDBUserBindingSource.DataMember = "tblDBUser"
+        Me.TblDBUserBindingSource.DataSource = Me.Login_ds
+        '
+        'Login_ds
+        '
+        Me.Login_ds.DataSetName = "login_ds"
+        Me.Login_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'pnlUsername
         '
@@ -158,32 +157,36 @@ Partial Class Lab_frmLogin
         Me.lblEncryptPW.TabIndex = 10
         Me.lblEncryptPW.Text = "EncryptPW"
         '
-        'btnOK
-        '
-        Me.btnOK.BackColor = System.Drawing.Color.Yellow
-        Me.btnOK.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnOK.Image = Global.PNGIMR_IS.My.Resources.Resources.ok_icon__1_
-        Me.btnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOK.Location = New System.Drawing.Point(102, 104)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(64, 30)
-        Me.btnOK.TabIndex = 2
-        Me.btnOK.Text = "&OK"
-        Me.btnOK.UseVisualStyleBackColor = False
-        '
-        'TblDBUserBindingSource
-        '
-        Me.TblDBUserBindingSource.DataMember = "tblDBUser"
-        Me.TblDBUserBindingSource.DataSource = Me.Login_ds
-        '
-        'Login_ds
-        '
-        Me.Login_ds.DataSetName = "login_ds"
-        Me.Login_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'TblDBUserTableAdapter
         '
         Me.TblDBUserTableAdapter.ClearBeforeFill = True
+        '
+        'BtnCancel
+        '
+        Me.BtnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCancel.Image = Global.PNGIMR_IS.My.Resources.Resources.cancel_btn__1_
+        Me.BtnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCancel.Location = New System.Drawing.Point(172, 104)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(64, 30)
+        Me.BtnCancel.TabIndex = 3
+        Me.BtnCancel.Text = "&Cancel"
+        Me.BtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnCancel.UseVisualStyleBackColor = False
+        '
+        'BtnOK
+        '
+        Me.BtnOK.BackColor = System.Drawing.Color.Yellow
+        Me.BtnOK.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnOK.Image = Global.PNGIMR_IS.My.Resources.Resources.ok_icon__1_
+        Me.BtnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnOK.Location = New System.Drawing.Point(102, 104)
+        Me.BtnOK.Name = "BtnOK"
+        Me.BtnOK.Size = New System.Drawing.Size(64, 30)
+        Me.BtnOK.TabIndex = 2
+        Me.BtnOK.Text = "&OK"
+        Me.BtnOK.UseVisualStyleBackColor = False
         '
         'Lab_frmLogin
         '
@@ -199,8 +202,8 @@ Partial Class Lab_frmLogin
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnlUsername)
         Me.Controls.Add(Me.pnlPassword)
-        Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnOK)
+        Me.Controls.Add(Me.BtnCancel)
+        Me.Controls.Add(Me.BtnOK)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Lab_frmLogin"
         Me.Opacity = 0.7R
@@ -208,19 +211,19 @@ Partial Class Lab_frmLogin
         Me.Text = "frmLogin"
         Me.pnlPassword.ResumeLayout(False)
         Me.pnlPassword.PerformLayout()
+        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Login_ds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlUsername.ResumeLayout(False)
         Me.pnlUsername.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.TblDBUserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Login_ds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents btnOK As Button
-    Friend WithEvents btnCancel As Button
+    Friend WithEvents BtnOK As Button
+    Friend WithEvents BtnCancel As Button
     Friend WithEvents pnlPassword As Panel
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents pnlUsername As Panel

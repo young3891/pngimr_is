@@ -18,11 +18,11 @@ Public Class Lab_frmInventory
         Me.TblInventoryTableAdapter.Fill(Me.InventoryList_ds.tblInventory)
 
         'Filters combo items to each combobox
-        Me.BindingSource_dept.Filter = "group_id = 102"
-        Me.BindingSource_dept.Sort = "items ASC"
-
         Me.BindingSource_site.Filter = "group_id = 101"
         Me.BindingSource_site.Sort = "items ASC"
+
+        Me.BindingSource_dept.Filter = "group_id = 102"
+        Me.BindingSource_dept.Sort = "items ASC"
 
         Me.BindingSource_room_name.Filter = "group_id = 103"
         Me.BindingSource_room_name.Sort = "items ASC"
@@ -33,6 +33,8 @@ Public Class Lab_frmInventory
         Me.BindingSource_supplier.Filter = "group_id = 105"
         Me.BindingSource_supplier.Sort = "items ASC"
 
+        Me.BindingSource_asset_name.Filter = "group_id = 106"
+        Me.BindingSource_asset_name.Sort = "items ASC"
         'Sets focus to add btn
         Me.tsbAdd.Select()
 
@@ -91,9 +93,9 @@ Public Class Lab_frmInventory
     End Sub
     Private Function ChecksMandatoryFields()
         '->Ensures the mandatory field should have value        
-        If Me.txtAssetName.TextLength = 0 Then
-            MessageBox.Show("Please enter an asset name.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Me.txtAssetName.Select()
+        If Me.CboAssetName.SelectedIndex = -1 Then
+            MessageBox.Show("Please select an asset name.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.CboAssetName.Select()
             Return False
         ElseIf Me.txtBrand.TextLength = 0 Then
             MessageBox.Show("Please enter a brand name.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -205,14 +207,6 @@ Public Class Lab_frmInventory
     Private Sub BtnAddSite_Click(sender As Object, e As EventArgs) Handles btnAddSite.Click
         Dim comboItemsFrm As New Lab_frmComboItems
 
-        'Stores comboboxes values to temp labels
-        'Me.Label1_site.Text = Me.cboSite.Text
-        'Me.Label1_department.Text = Me.cboDepartmentUnit.Text
-        'Me.Label1_RoomName.Text = Me.cboRoomName.Text
-        'Me.Label1_RoomNo.Text = Me.cboRoomNo.Text
-        'Me.Label1_Supplier.Text = Me.cboSupplier.Text
-        '------------------------------------------------
-
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_site, "group_id")
 
@@ -223,14 +217,6 @@ Public Class Lab_frmInventory
     End Sub
     Private Sub BtnAddDept_Click(sender As Object, e As EventArgs) Handles btnAddDept.Click
         Dim comboItemsFrm As New Lab_frmComboItems
-
-        'Stores comboboxes values to temp labels
-        'Me.Label1_site.Text = Me.cboSite.Text
-        'Me.Label1_department.Text = Me.cboDepartmentUnit.Text
-        'Me.Label1_RoomName.Text = Me.cboRoomName.Text
-        'Me.Label1_RoomNo.Text = Me.cboRoomNo.Text
-        'Me.Label1_Supplier.Text = Me.cboSupplier.Text
-        '------------------------------------------------
 
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_dept, "group_id")
@@ -243,14 +229,6 @@ Public Class Lab_frmInventory
     Private Sub BtnAddRoomName_Click(sender As Object, e As EventArgs) Handles btnAddRoomName.Click
         Dim comboItemsFrm As New Lab_frmComboItems
 
-        'Stores comboboxes values to temp labels
-        'Me.Label1_site.Text = Me.cboSite.Text
-        'Me.Label1_department.Text = Me.cboDepartmentUnit.Text
-        'Me.Label1_RoomName.Text = Me.cboRoomName.Text
-        'Me.Label1_RoomNo.Text = Me.cboRoomNo.Text
-        'Me.Label1_Supplier.Text = Me.cboSupplier.Text
-        '------------------------------------------------
-
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_room_name, "group_id")
 
@@ -261,14 +239,6 @@ Public Class Lab_frmInventory
     End Sub
     Private Sub BtnAddRoomNo_Click(sender As Object, e As EventArgs) Handles btnAddRoomNo.Click
         Dim comboItemsFrm As New Lab_frmComboItems
-
-        'Stores comboboxes values to temp labels
-        'Me.Label1_site.Text = Me.cboSite.Text
-        'Me.Label1_department.Text = Me.cboDepartmentUnit.Text
-        'Me.Label1_RoomName.Text = Me.cboRoomName.Text
-        'Me.Label1_RoomNo.Text = Me.cboRoomNo.Text
-        'Me.Label1_Supplier.Text = Me.cboSupplier.Text
-        '------------------------------------------------
 
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_room_num, "group_id")
@@ -542,5 +512,24 @@ Public Class Lab_frmInventory
         Me.tsbDelete.Enabled = True
         Me.TblInventoryDataGridView.Enabled = True
         Me.tsbCancel.Enabled = False
+    End Sub
+
+    Private Sub BtnAddAssetName_Click(sender As Object, e As EventArgs) Handles BtnAddAssetName.Click
+        Dim comboItemsFrm As New Lab_frmComboItems
+
+        Me.lblGroupID.DataBindings.Clear()
+        Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_asset_name, "group_id")
+
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
+        comboItemsFrm.Text = "Add Asset Name"
+        comboItemsFrm.ShowDialog()
+    End Sub
+
+    Private Sub CboAssetName_Click(sender As Object, e As EventArgs) Handles CboAssetName.Click
+        With CboAssetName
+            .DataSource = Me.TblComboItemsTableAdapter.DataTable_asset_name
+            .DisplayMember = "items"
+        End With
     End Sub
 End Class

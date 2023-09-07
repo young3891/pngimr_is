@@ -171,7 +171,7 @@ Partial Class Lab_frmComboItems
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(355, 306)
+        Me.ClientSize = New System.Drawing.Size(481, 306)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblID)

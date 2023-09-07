@@ -2,7 +2,7 @@
     Inherits Form
     Dim grpID As Integer
     'Dim inventoryfrm As New frmInventory()   
-    Private Sub frmComboItems_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmComboItems_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Passes the group id value from the global class to the group id label
         Me.lblGroupID.Text = GlobalVariablesClass.groupID
@@ -20,6 +20,8 @@
             Me.TblComboItemsTableAdapter.FillBy_room_no(Me.ComboItems_ds.tblComboItems)
         ElseIf Me.lblGroupID.Text = "105" Then
             Me.TblComboItemsTableAdapter.FillBy_supplier(Me.ComboItems_ds.tblComboItems)
+        ElseIf Me.lblGroupID.Text = "106" Then
+            Me.TblComboItemsTableAdapter.FillBy_asset_name(Me.ComboItems_ds.tblComboItems)
         End If
 
         'Applies the rounded features of the btns coded in the CustomizedControlsClass class
@@ -42,7 +44,7 @@
         Me.btnSave.Enabled = False
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
             If Me.lblID.Text < 0 Then
                 'Checks to ensure that item field should have a value
@@ -83,7 +85,7 @@
 
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.txtNewItem.Enabled = False
         Me.TblComboItemsDataGridView.Enabled = True
         Me.btnDelete.Enabled = True
@@ -94,12 +96,12 @@
         Me.ComboItems_ds.tblComboItems.RejectChanges()
     End Sub
 
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Me.TblComboItemsBindingSource.RemoveCurrent()
         Me.TblComboItemsTableAdapter.Update(Me.ComboItems_ds.tblComboItems)
     End Sub
 
-    Private Sub txtNewItem_TextChanged(sender As Object, e As EventArgs) Handles txtNewItem.TextChanged
+    Private Sub TxtNewItem_TextChanged(sender As Object, e As EventArgs) Handles txtNewItem.TextChanged
         If Me.txtNewItem.TextLength = 0 Then
             Me.btnSave.Enabled = False
         ElseIf Me.txtNewItem.TextLength > 0 Then

@@ -18,6 +18,7 @@ Public Class Lab_frmLogin
         Return Convert.ToBase64String(hashed)
     End Function
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'testing push command to github
         Me.TblDBUserTableAdapter.Fill(Me.Login_ds.tblDBUser, Me.txtUsername.Text, Me.txtPassword.Text)
 
         CustomizedControlsClass.frmLogin_btnCancel(Me)
@@ -35,11 +36,10 @@ Public Class Lab_frmLogin
         End If
     End Sub
 
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
     End Sub
-
-    Public Sub BtnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+    Public Sub BtnOK_Click(sender As Object, e As EventArgs) Handles BtnOK.Click
         '--Logging into the system for the first time--------------------------------------------------------------------------
 
         '->Checks number of users already registered        
