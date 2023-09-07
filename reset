@@ -1,0 +1,65 @@
+[33mcommit 2dab1de7f337809ca0a6fec32d165459398640ab[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Thu Sep 7 12:23:18 2023 +1000
+
+    test of code
+
+[33mcommit 3fc06171c3b0f2c5370bc4f987fca58a2e935d62[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Thu Sep 7 11:45:05 2023 +1000
+
+    removed comment from the form login load event
+
+[33mcommit 4af3ccdd559886cb10f06d360eee13a653719ab4[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Thu Sep 7 11:39:27 2023 +1000
+
+    added a test code to load event of form login
+
+[33mcommit 5cf2c2af91f6fbf28d70568f26f05a02990d878a[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Tue Sep 5 11:25:09 2023 +1000
+
+    change first letters of methods and variables from lowercase to uppercases
+
+[33mcommit 97b5ba753ae1b71a1f8e09d930dc14ca145c2d55[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Mon Sep 4 21:01:30 2023 +1000
+
+    changed database name from pngimr_lab_inventory to PNGIMR_IS
+
+[33mcommit 4c35bbef3660f1909a37b507c23236023604f675[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Fri Aug 25 15:27:03 2023 +1000
+
+    Modified frmAddUser to correct bindingsources of controls
+
+[33mcommit 4711bc813de7064f28703a6b5a8a8f48837182c5[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Fri Aug 25 11:42:30 2023 +1000
+
+    making backup
+
+[33mcommit 56bdd924b1893e017926e006b1eff83025c42267[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Thu Aug 24 16:21:35 2023 +1000
+
+    updates done to frmAddUser
+
+[33mcommit fca8b165fe93e870305e441e3326f48d3d5a245f[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Thu Aug 24 14:44:43 2023 +1000
+
+    Did some modifications to frmAddUser form
+
+[33mcommit 94ba7e6124d4abda095f0cbde72e4aebc36c2f29[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Thu Aug 24 13:06:02 2023 +1000
+
+    Added some comments to frmMain btnInventory code
+
+[33mcommit af53d6cebd8df523f6395902a1e96d2c5fb86b33[m
+Author: young3891 <youngedu.ura@gmail.com>
+Date:   Thu Aug 24 12:53:36 2023 +1000
+
+    Initial commit
