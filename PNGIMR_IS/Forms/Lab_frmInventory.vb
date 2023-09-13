@@ -517,7 +517,7 @@ Public Class Lab_frmInventory
     End Sub
 
     Private Sub BtnAddAssetName_Click(sender As Object, e As EventArgs) Handles BtnAddAssetName.Click
-
+        'Test (remove later)
         Me.lblGroupID.Text = 106
         GlobalVariablesClass.groupID = Me.lblGroupID.Text
 
