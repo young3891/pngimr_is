@@ -15,12 +15,12 @@
     '        pnlFullName.Region = New System.Drawing.Region(path)
     '    End If
     'End Sub
-    Public Shared Sub cboSiteItems()
-        'Loads respective items onto the comboboxes        
-        'TblComboItemsTableAdapter.Fill(inventoryList_ds.tblComboItems)
-        With Lab_frmInventory.cboSite
-            .DataSource = Lab_frmInventory.BindingSource_site
-            .DisplayMember = "items"
-        End With
-    End Sub
+    'Public Shared Sub cboSiteItems()
+    '    'Loads respective items onto the comboboxes        
+    '    'TblComboItemsTableAdapter.Fill(inventoryList_ds.tblComboItems)
+    '    With Lab_frmInventory.cboSite
+    '        .DataSource = Lab_frmInventory.BindingSource_site
+    '        .DisplayMember = "items"
+    '    End With
+    'End Sub
 End Class

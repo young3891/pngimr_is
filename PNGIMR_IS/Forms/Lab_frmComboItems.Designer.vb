@@ -24,19 +24,19 @@ Partial Class Lab_frmComboItems
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TblComboItemsDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TblComboItemsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ComboItems_ds = New PNGIMR_IS.comboItems_ds()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.lblGroupID = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblNameOfItem = New System.Windows.Forms.Label()
         Me.txtNewItem = New System.Windows.Forms.TextBox()
-        Me.TblComboItemsTableAdapter = New PNGIMR_IS.comboItems_dsTableAdapters.tblComboItemsTableAdapter()
-        Me.TableAdapterManager = New PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager()
         Me.lblID = New System.Windows.Forms.Label()
         Me.btnDelete = New System.Windows.Forms.Button()
+        Me.TblComboItemsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboItems_ds = New PNGIMR_IS.comboItems_ds()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblComboItemsTableAdapter = New PNGIMR_IS.comboItems_dsTableAdapters.tblComboItemsTableAdapter()
+        Me.TableAdapterManager = New PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager()
         CType(Me.TblComboItemsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblComboItemsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ComboItems_ds, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,34 +54,6 @@ Partial Class Lab_frmComboItems
         Me.TblComboItemsDataGridView.ReadOnly = True
         Me.TblComboItemsDataGridView.Size = New System.Drawing.Size(339, 220)
         Me.TblComboItemsDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn1.FillWeight = 60.9137!
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "items"
-        Me.DataGridViewTextBoxColumn2.FillWeight = 139.0863!
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Items"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'TblComboItemsBindingSource
-        '
-        Me.TblComboItemsBindingSource.DataMember = "tblComboItems"
-        Me.TblComboItemsBindingSource.DataSource = Me.ComboItems_ds
-        '
-        'ComboItems_ds
-        '
-        Me.ComboItems_ds.DataSetName = "comboItems_ds"
-        Me.ComboItems_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'btnSave
         '
@@ -134,16 +106,6 @@ Partial Class Lab_frmComboItems
         Me.txtNewItem.Size = New System.Drawing.Size(266, 20)
         Me.txtNewItem.TabIndex = 6
         '
-        'TblComboItemsTableAdapter
-        '
-        Me.TblComboItemsTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tblComboItemsTableAdapter = Me.TblComboItemsTableAdapter
-        Me.TableAdapterManager.UpdateOrder = PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'lblID
         '
         Me.lblID.AutoSize = True
@@ -166,12 +128,51 @@ Partial Class Lab_frmComboItems
         Me.btnDelete.Text = "&Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
+        'TblComboItemsBindingSource
+        '
+        Me.TblComboItemsBindingSource.DataMember = "tblComboItems"
+        Me.TblComboItemsBindingSource.DataSource = Me.ComboItems_ds
+        '
+        'ComboItems_ds
+        '
+        Me.ComboItems_ds.DataSetName = "comboItems_ds"
+        Me.ComboItems_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.FillWeight = 60.9137!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "items"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 139.0863!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Items"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'TblComboItemsTableAdapter
+        '
+        Me.TblComboItemsTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tblComboItems1TableAdapter_backup = Nothing
+        Me.TableAdapterManager.tblComboItemsTableAdapter = Me.TblComboItemsTableAdapter
+        Me.TableAdapterManager.UpdateOrder = PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'Lab_frmComboItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(481, 306)
+        Me.ClientSize = New System.Drawing.Size(353, 306)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblID)

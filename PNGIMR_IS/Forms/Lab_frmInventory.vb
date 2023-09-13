@@ -205,64 +205,66 @@ Public Class Lab_frmInventory
     End Sub
 
     Private Sub BtnAddSite_Click(sender As Object, e As EventArgs) Handles btnAddSite.Click
+
+        Me.lblGroupID.Text = 101
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
         Dim comboItemsFrm As New Lab_frmComboItems
 
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_site, "group_id")
 
-        GlobalVariablesClass.groupID = Me.lblGroupID.Text
-
         comboItemsFrm.Text = "Add Site"
         comboItemsFrm.ShowDialog()
+
     End Sub
     Private Sub BtnAddDept_Click(sender As Object, e As EventArgs) Handles btnAddDept.Click
+
+        Me.lblGroupID.Text = 102
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
         Dim comboItemsFrm As New Lab_frmComboItems
 
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_dept, "group_id")
 
-        GlobalVariablesClass.groupID = Me.lblGroupID.Text
-
         comboItemsFrm.Text = "Add Department/ Unit"
         comboItemsFrm.ShowDialog()
     End Sub
     Private Sub BtnAddRoomName_Click(sender As Object, e As EventArgs) Handles btnAddRoomName.Click
+
+        Me.lblGroupID.Text = 103
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
         Dim comboItemsFrm As New Lab_frmComboItems
 
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_room_name, "group_id")
 
-        GlobalVariablesClass.groupID = Me.lblGroupID.Text
-
         comboItemsFrm.Text = "Add Room Name"
         comboItemsFrm.ShowDialog()
     End Sub
     Private Sub BtnAddRoomNo_Click(sender As Object, e As EventArgs) Handles btnAddRoomNo.Click
+        Me.lblGroupID.Text = 104
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
         Dim comboItemsFrm As New Lab_frmComboItems
 
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_room_num, "group_id")
 
-        GlobalVariablesClass.groupID = Me.lblGroupID.Text
-
         comboItemsFrm.Text = "Add Room No"
         comboItemsFrm.ShowDialog()
     End Sub
     Private Sub BtnAddSupplier_Click(sender As Object, e As EventArgs) Handles btnAddSupplier.Click
-        Dim comboItemsFrm As New Lab_frmComboItems
 
-        'Stores comboboxes values to temp labels
-        'Me.Label1_site.Text = Me.cboSite.Text
-        'Me.Label1_department.Text = Me.cboDepartmentUnit.Text
-        'Me.Label1_RoomName.Text = Me.cboRoomName.Text
-        'Me.Label1_RoomNo.Text = Me.cboRoomNo.Text
-        'Me.Label1_Supplier.Text = Me.cboSupplier.Text
-        '------------------------------------------------
+        Me.lblGroupID.Text = 105
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
+        Dim comboItemsFrm As New Lab_frmComboItems
 
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_supplier, "group_id")
-
-        GlobalVariablesClass.groupID = Me.lblGroupID.Text
 
         comboItemsFrm.Text = "Add Supplier"
         comboItemsFrm.ShowDialog()
@@ -515,15 +517,18 @@ Public Class Lab_frmInventory
     End Sub
 
     Private Sub BtnAddAssetName_Click(sender As Object, e As EventArgs) Handles BtnAddAssetName.Click
+
+        Me.lblGroupID.Text = 106
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
         Dim comboItemsFrm As New Lab_frmComboItems
 
         Me.lblGroupID.DataBindings.Clear()
         Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_asset_name, "group_id")
 
-        GlobalVariablesClass.groupID = Me.lblGroupID.Text
-
         comboItemsFrm.Text = "Add Asset Name"
         comboItemsFrm.ShowDialog()
+
     End Sub
 
     Private Sub CboAssetName_Click(sender As Object, e As EventArgs) Handles CboAssetName.Click

@@ -3,24 +3,23 @@
     Dim grpID As Integer
     'Dim inventoryfrm As New frmInventory()   
     Private Sub FrmComboItems_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         'Passes the group id value from the global class to the group id label
         Me.lblGroupID.Text = GlobalVariablesClass.groupID
-        grpID = GlobalVariablesClass.groupID
+        'grpID = GlobalVariablesClass.groupID
 
         'The dgv is populated with values according to add button associated to which combo btn
-        'in the inventory form
-        If Me.lblGroupID.Text = "101" Then
+        'in the inventory form is selected
+        If Me.lblGroupID.Text = 101 Then
             Me.TblComboItemsTableAdapter.FillBy_Site(Me.ComboItems_ds.tblComboItems)
-        ElseIf Me.lblGroupID.Text = "102" Then
+        ElseIf Me.lblGroupID.Text = 102 Then
             Me.TblComboItemsTableAdapter.FillBy_dept(Me.ComboItems_ds.tblComboItems)
-        ElseIf Me.lblGroupID.Text = "103" Then
+        ElseIf Me.lblGroupID.Text = 103 Then
             Me.TblComboItemsTableAdapter.FillBy_room_name(Me.ComboItems_ds.tblComboItems)
-        ElseIf Me.lblGroupID.Text = "104" Then
+        ElseIf Me.lblGroupID.Text = 104 Then
             Me.TblComboItemsTableAdapter.FillBy_room_no(Me.ComboItems_ds.tblComboItems)
-        ElseIf Me.lblGroupID.Text = "105" Then
+        ElseIf Me.lblGroupID.Text = 105 Then
             Me.TblComboItemsTableAdapter.FillBy_supplier(Me.ComboItems_ds.tblComboItems)
-        ElseIf Me.lblGroupID.Text = "106" Then
+        ElseIf Me.lblGroupID.Text = 106 Then
             Me.TblComboItemsTableAdapter.FillBy_asset_name(Me.ComboItems_ds.tblComboItems)
         End If
 
@@ -54,7 +53,7 @@
                     Exit Sub
                 End If
                 'Assigns group id stored from grpID variable to the group id label
-                Me.lblGroupID.Text = grpID
+                Me.lblGroupID.Text = GlobalVariablesClass.groupID
 
                 'Ends record editing and saves the data
                 Me.TblComboItemsBindingSource.EndEdit()
@@ -64,7 +63,8 @@
                 If r > 0 Then
                     'My.Forms.frmInventory.TblComboItemsTableAdapter.Fill(inventoryList_ds.tblInventory)
                     'frmInventory.TblComboItemsTableAdapter.Fill(inventoryList_ds.tblInventory)
-                    ComboItemsClass.cboSiteItems()
+
+                    'ComboItemsClass.cboSiteItems()
                     MessageBox.Show("Saved!")
                     Me.DialogResult = DialogResult.OK
 
@@ -81,6 +81,7 @@
             End If
         Catch ex As Exception
             MessageBox.Show("Error! " + ex.Message)
+            Me.Close()
         End Try
 
     End Sub

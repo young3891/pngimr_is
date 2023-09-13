@@ -8,7 +8,7 @@
     '->Stores the date settings of the computer in use
     Public Shared current_date_settings As String = System.Globalization.CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern()
     '-------------------------------------------
-    Public Shared groupID As String = Lab_frmInventory.lblGroupID.Text
+    Public Shared groupID As String '= Lab_frmInventory.lblGroupID.Text
     '->Stores the last id generated
     'Public Shared last_id_generated As String = frmStudentRegistration.lblTempID.Text
     '------------------------------------   
