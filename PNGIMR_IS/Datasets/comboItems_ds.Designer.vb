@@ -1241,7 +1241,7 @@ Namespace comboItems_dsTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(6) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(7) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        id, items, group_id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tblComboItems"
@@ -1252,24 +1252,28 @@ Namespace comboItems_dsTableAdapters
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 102)"
+            Me._commandCollection(2).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 107)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 103)"
+            Me._commandCollection(3).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 102)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 104)"
+            Me._commandCollection(4).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 103)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 101)"
+            Me._commandCollection(5).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 104)"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(6) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(6).Connection = Me.Connection
-            Me._commandCollection(6).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 105)"
+            Me._commandCollection(6).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 101)"
             Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(7).Connection = Me.Connection
+            Me._commandCollection(7).CommandText = "SELECT group_id, id, items FROM tblComboItems WHERE (group_id = 105)"
+            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1302,7 +1306,7 @@ Namespace comboItems_dsTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_dept(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
+        Public Overloads Overridable Function FillBy_brand(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1315,7 +1319,7 @@ Namespace comboItems_dsTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_room_name(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
+        Public Overloads Overridable Function FillBy_dept(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1328,7 +1332,7 @@ Namespace comboItems_dsTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_room_no(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
+        Public Overloads Overridable Function FillBy_room_name(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1341,7 +1345,7 @@ Namespace comboItems_dsTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_Site(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
+        Public Overloads Overridable Function FillBy_room_no(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(5)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1354,8 +1358,21 @@ Namespace comboItems_dsTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_supplier(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
+        Public Overloads Overridable Function FillBy_Site(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(6)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy_supplier(ByVal dataTable As comboItems_ds.tblComboItemsDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(7)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If

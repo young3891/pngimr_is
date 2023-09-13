@@ -21,6 +21,8 @@
             Me.TblComboItemsTableAdapter.FillBy_supplier(Me.ComboItems_ds.tblComboItems)
         ElseIf Me.lblGroupID.Text = 106 Then
             Me.TblComboItemsTableAdapter.FillBy_asset_name(Me.ComboItems_ds.tblComboItems)
+        ElseIf Me.lblGroupID.Text = 107 Then
+            Me.TblComboItemsTableAdapter.FillBy_brand(Me.ComboItems_ds.tblComboItems)
         End If
 
         'Applies the rounded features of the btns coded in the CustomizedControlsClass class

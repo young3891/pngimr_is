@@ -537,4 +537,25 @@ Public Class Lab_frmInventory
             .DisplayMember = "items"
         End With
     End Sub
+
+    Private Sub BtnBrand_Click(sender As Object, e As EventArgs) Handles BtnBrand.Click
+
+        Me.lblGroupID.Text = 107
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
+        Dim comboItemsFrm As New Lab_frmComboItems
+
+        Me.lblGroupID.DataBindings.Clear()
+        Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_brand, "group_id")
+
+        comboItemsFrm.Text = "Add Brand"
+        comboItemsFrm.ShowDialog()
+    End Sub
+
+    Private Sub CboBrand_Click(sender As Object, e As EventArgs) Handles CboBrand.Click
+        With CboBrand
+            .DataSource = Me.TblComboItemsTableAdapter.DataTable_brand
+            .DisplayMember = "items"
+        End With
+    End Sub
 End Class
