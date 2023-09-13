@@ -97,17 +97,17 @@ Public Class Lab_frmInventory
             MessageBox.Show("Please select an asset name.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.CboAssetName.Select()
             Return False
-        ElseIf Me.txtBrand.TextLength = 0 Then
-            MessageBox.Show("Please enter a brand name.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Me.txtBrand.Select()
+        ElseIf Me.CboBrand.SelectedIndex = -1 Then
+            MessageBox.Show("Please select a brand name.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.CboBrand.Select()
             Return False
         ElseIf Me.txtDescription.TextLength = 0 Then
             MessageBox.Show("Please specify a description.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.txtDescription.Select()
             Return False
-        ElseIf Me.txtCategory.TextLength = 0 Then
-            MessageBox.Show("Please specify category.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Me.txtCategory.Select()
+        ElseIf Me.CboCategory.SelectedIndex = -1 Then
+            MessageBox.Show("Please select a category.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.CboCategory.Select()
             Return False
         ElseIf Me.txtAssetNo.TextLength = 0 Then
             MessageBox.Show("Please enter asset number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -555,6 +555,27 @@ Public Class Lab_frmInventory
     Private Sub CboBrand_Click(sender As Object, e As EventArgs) Handles CboBrand.Click
         With CboBrand
             .DataSource = Me.TblComboItemsTableAdapter.DataTable_brand
+            .DisplayMember = "items"
+        End With
+    End Sub
+
+    Private Sub BtnCategory_Click(sender As Object, e As EventArgs) Handles BtnCategory.Click
+
+        Me.lblGroupID.Text = 108
+        GlobalVariablesClass.groupID = Me.lblGroupID.Text
+
+        Dim comboItemsFrm As New Lab_frmComboItems
+
+        Me.lblGroupID.DataBindings.Clear()
+        Me.lblGroupID.DataBindings.Add("Text", Me.BindingSource_category, "group_id")
+
+        comboItemsFrm.Text = "Add Category"
+        comboItemsFrm.ShowDialog()
+    End Sub
+
+    Private Sub CboCategory_Click(sender As Object, e As EventArgs) Handles CboCategory.Click
+        With CboCategory
+            .DataSource = Me.TblComboItemsTableAdapter.DataTable_category
             .DisplayMember = "items"
         End With
     End Sub

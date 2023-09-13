@@ -187,22 +187,12 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:PNGIMR_IS.inventoryList_ds.tblComboItems1_backupDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:PNGIMR_IS.inventoryList_ds.tblInventoryRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:PNGIMR_IS.inventoryList_ds.tblComboItemsRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:PNGIMR_IS.inventoryList_ds.tblComboItems1_backupRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -217,22 +207,12 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:PNGIMR_IS.inventoryList_ds.tblComboItems1_backupRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:PNGIMR_IS.inventoryList_dsTableAdapters.tblInventoryTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:PNGIMR_IS.inventoryList_dsTableAdapters.tblComboItemsTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:PNGIMR_IS.inventoryList_dsTableAdapters.tblComboItems1Table_backup">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
