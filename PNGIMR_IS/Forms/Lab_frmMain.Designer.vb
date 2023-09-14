@@ -42,7 +42,7 @@ Partial Class Lab_frmMain
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Arial Narrow", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(228, 191)
+        Me.lblTitle.Location = New System.Drawing.Point(390, 191)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(796, 75)
         Me.lblTitle.TabIndex = 0
@@ -134,13 +134,13 @@ Partial Class Lab_frmMain
         'tsmAddUser
         '
         Me.tsmAddUser.Name = "tsmAddUser"
-        Me.tsmAddUser.Size = New System.Drawing.Size(180, 22)
+        Me.tsmAddUser.Size = New System.Drawing.Size(124, 22)
         Me.tsmAddUser.Text = "&User"
         '
         'tsmInventory
         '
         Me.tsmInventory.Name = "tsmInventory"
-        Me.tsmInventory.Size = New System.Drawing.Size(180, 22)
+        Me.tsmInventory.Size = New System.Drawing.Size(124, 22)
         Me.tsmInventory.Text = "&Inventory"
         '
         'Lab_frmMain

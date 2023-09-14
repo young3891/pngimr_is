@@ -163,7 +163,6 @@ Partial Class Lab_frmComboItems
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tblComboItems1TableAdapter_backup = Nothing
         Me.TableAdapterManager.tblComboItemsTableAdapter = Me.TblComboItemsTableAdapter
         Me.TableAdapterManager.UpdateOrder = PNGIMR_IS.comboItems_dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

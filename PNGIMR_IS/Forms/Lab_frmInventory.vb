@@ -2,8 +2,6 @@
 Public Class Lab_frmInventory
     Dim un As String
     Dim current_date_time As String
-    'Dim selectedDate As DateTime?
-    'Dim defaultDate As String
     Private Sub FrmInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Me.TblInventoryTableAdapter.get_Total() = 0 Then
             Me.tsbSave.Enabled = False
@@ -35,18 +33,18 @@ Public Class Lab_frmInventory
 
         Me.BindingSource_asset_name.Filter = "group_id = 106"
         Me.BindingSource_asset_name.Sort = "items ASC"
+
         'Sets focus to add btn
+        Me.tsbAdd.Enabled = True
         Me.tsbAdd.Select()
 
-        'Gets the user name of the person who logged in and stores the value in the label 'lblEditedBy'
-        un = GlobalVariablesClass.User_Name
-        'Me.lblEditedBy.Text = frmLogin.txtUsername.Text
-        'Me.Label1.Text = frmLogin.txtUsername.Text
+        'Gets the user name of the person who logged in and stores the value in the label 'lblEditedBy'        
+        Me.lblEditedBy.Text = GlobalVariablesClass.User_Name
+
         'Starts the timer
         Me.Timer1.Start()
 
-        'Sets format of the date columns of the dgv
-        'Dim dateColumnIndex As Integer = 0
+        'Sets format of the date columns of the dgv        
         Me.TblInventoryDataGridView.Columns(10).DefaultCellStyle.Format = "dd/MM/yyyy"
         Me.TblInventoryDataGridView.Columns(11).DefaultCellStyle.Format = "dd/MM/yyyy"
         Me.TblInventoryDataGridView.Columns(16).DefaultCellStyle.Format = "dd/MM/yyyy"

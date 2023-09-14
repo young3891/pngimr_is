@@ -97,17 +97,7 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:PNGIMR_IS.comboItems_ds.tblComboItems1_backupDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:PNGIMR_IS.comboItems_ds.tblComboItemsRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:PNGIMR_IS.comboItems_ds.tblComboItems1_backupRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -117,17 +107,7 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
-<member name="T:PNGIMR_IS.comboItems_ds.tblComboItems1_backupRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:PNGIMR_IS.comboItems_dsTableAdapters.tblComboItemsTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:PNGIMR_IS.comboItems_dsTableAdapters.tblComboItems1TableAdapter_backup">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
