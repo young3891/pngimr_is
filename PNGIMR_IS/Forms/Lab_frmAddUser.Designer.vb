@@ -252,7 +252,6 @@ Partial Class Lab_frmAddUser
         'txtPassword
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblDBUserBindingSource, "pw", True))
         Me.txtPassword.Location = New System.Drawing.Point(7, 4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
